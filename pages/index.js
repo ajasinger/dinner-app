@@ -20,6 +20,17 @@ export default function Home() {
           <h1>Who's Coming to Dinner</h1>
           <h2>Your AI enabled restaurant finder</h2>
         </div>
+        <form className="form-block">
+          {/* 
+          locations (up to 5) [numbered]
+          method of transportation [check boxes?]
+          food preferences [check boxes?]
+          price point [check boxes?]
+          */}
+        </form>
+        <div className="answer-block">
+          <h2>Your Recommendation:</h2>
+        </div>
       </main>
     </div>
   )
