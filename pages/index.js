@@ -63,6 +63,7 @@ export default function Home() {
           {/* button */}
           <button type="submit">Find me restaurants</button>
         </form>
+        {/* validate addresses */}
         <div className="answer-block">
           <h2>Your Recommendation:</h2>
         </div>
