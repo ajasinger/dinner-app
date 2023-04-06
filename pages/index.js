@@ -24,7 +24,7 @@ export default function Home() {
         <form className="form-block" action="/site-here" method="post">
           {/* addreses */}
           <label for="first-address">Address 1:</label>
-          <input type="text" id="first-address" name="first-address"/>
+          <input type="text" id="first-address" name="first-address" required/>
           <label for="second-address">Address 2:</label>
           <input type="text" id="second-address" name="second-address"/>
           <label for="third-address">Address 3:</label>
@@ -60,6 +60,8 @@ export default function Home() {
           <label for="price2"> $$$</label>
           <input type="checkbox" id="price3" name="price3" value="expensive" />
           <label for="price3"> $$$$</label>
+          {/* button */}
+          <button type="submit">Find me restaurants</button>
         </form>
         <div className="answer-block">
           <h2>Your Recommendation:</h2>
