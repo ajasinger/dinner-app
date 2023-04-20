@@ -36,7 +36,7 @@ export default function Home() {
           <input type="radio" id="pub-transport" name="transportation" value="pub-transport" />
           <label for="pub-transport">Public Transportation</label>
           <input type="radio" id="pub-transport-and-car" name="transportation" value="pub-transport-and-car" />
-          <label for="pub-transport-and-car">Public Transportation & Subway</label>
+          <label for="pub-transport-and-car">Car & Public Transportation</label>
           {/* food types */}
           <label for="food">What type of food you'd like to eat:</label>
           <input type="checkbox" id="food1" name="food1" value="Italian" />
