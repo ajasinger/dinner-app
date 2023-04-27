@@ -4,8 +4,6 @@ import styles from '@/styles/Home.module.css'
 import HeaderBlock from '../components/HeaderBlock';
 import FormBlock from '../components/FormBlock';
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
   return (
     <div>
