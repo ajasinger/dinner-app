@@ -31,7 +31,7 @@ const FormBlock = () => {
                 </fieldset>
 
                 {/* event type */}
-                <fieldset>
+                <fieldset className="form-event-type">
                     <legend><span className="number">3.</span>Would you like options that are good for any of the below? (select any amount)</legend>
                     <input type="checkbox" id="meeting" name="event-type" value="meeting" />
                     <label for="meeting">Meeting</label>
@@ -44,7 +44,7 @@ const FormBlock = () => {
                 </fieldset>
 
                 {/* food types */}
-                <fieldset>
+                <fieldset className="form-food-type">
                     <legend><span className="number">4.</span>What type of food would you like to eat? (select any amount)</legend>
                     <input type="checkbox" id="italian" name="food-type" value="italian" />
                     <label for="italian">Italian</label>
@@ -65,7 +65,7 @@ const FormBlock = () => {
                 </fieldset>
 
                 {/* price point */}
-                <fieldset>
+                <fieldset className="form-price">
                     <legend><span className="number">5.</span>What is your preferred price point? (select any amount)</legend>
                     <input type="checkbox" id="inexpensive" name="price" value="inexpensive" />
                     <label for="inexpensive">$$</label>
