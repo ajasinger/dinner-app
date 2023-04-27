@@ -1,4 +1,4 @@
-
+import { sora, spaceMono } from "../utils/fonts";
 
 const FormBlock = () => {
     return (
@@ -6,22 +6,22 @@ const FormBlock = () => {
         <div className="form-block">
 
             {/* add in form destination and get or post*/}
-            <form className="form-block" action="/site-here" method="post">
+            <form className={sora.className} action="/site-here" method="post">
 
                 {/* addreses */}
                 <fieldset className="form-addresses">
-                    <legend><span className="number">1.</span>Where is everyone coming from?</legend>
+                    <legend><span className={spaceMono.className}>1.</span>Where is everyone coming from?</legend>
                     <label for="first-address">Neighborhood 1:</label>
-                    <input type="text" id="first-address" name="first-address" value="enter the name of a neightborhood" required />
+                    <input className={spaceMono.className} type="text" id="first-address" name="first-address" value="enter the name of a neightborhood" required />
                     <label for="second-address">Neighborhood 2:</label>
-                    <input type="text" id="second-address" name="second-address" value="enter the name of a neightborhood" />
+                    <input className={spaceMono.className} type="text" id="second-address" name="second-address" value="enter the name of a neightborhood" />
                     <label for="third-address">Neighborhood 3:</label>
-                    <input type="text" id="third-address" name="third-address" value="enter the name of a neightborhood" />
+                    <input className={spaceMono.className} type="text" id="third-address" name="third-address" value="enter the name of a neightborhood" />
                 </fieldset>
 
                 {/* mode of transportation */}
                 <fieldset className="form-transportation">
-                    <legend><span className="number">2.</span>How is everyone getting there? (select one)</legend>
+                    <legend><span className={spaceMono.className}>2.</span>How is everyone getting there? (select one)</legend>
                     <input type="radio" id="car" name="transportation" value="car" />
                     <label for="car">Car</label>
                     <input type="radio" id="public-transportation" name="transportation" value="public-transportation" />
@@ -32,7 +32,7 @@ const FormBlock = () => {
 
                 {/* event type */}
                 <fieldset className="form-event-type">
-                    <legend><span className="number">3.</span>Would you like options that are good for any of the below? (select any amount)</legend>
+                    <legend><span className={spaceMono.className}>3.</span>Would you like options that are good for any of the below? (select any amount)</legend>
                     <input type="checkbox" id="meeting" name="event-type" value="meeting" />
                     <label for="meeting">Meeting</label>
                     <input type="checkbox" id="date-night" name="event-type" value="date-night" />
@@ -45,7 +45,7 @@ const FormBlock = () => {
 
                 {/* food types */}
                 <fieldset className="form-food-type">
-                    <legend><span className="number">4.</span>What type of food would you like to eat? (select any amount)</legend>
+                    <legend><span className={spaceMono.className}>4.</span>What type of food would you like to eat? (select any amount)</legend>
                     <input type="checkbox" id="italian" name="food-type" value="italian" />
                     <label for="italian">Italian</label>
                     <input type="checkbox" id="new-american" name="food-type" value="new-american" />
@@ -66,7 +66,7 @@ const FormBlock = () => {
 
                 {/* price point */}
                 <fieldset className="form-price">
-                    <legend><span className="number">5.</span>What is your preferred price point? (select any amount)</legend>
+                    <legend><span className={spaceMono.className}>5.</span>What is your preferred price point? (select any amount)</legend>
                     <input type="checkbox" id="inexpensive" name="price" value="inexpensive" />
                     <label for="inexpensive">$$</label>
                     <input type="checkbox" id="moderate-price" name="price" value="moderate-price" />
@@ -76,7 +76,7 @@ const FormBlock = () => {
                 </fieldset>
 
                 {/* button */}
-                <button type="submit">Find me restaurants</button>
+                <button className={spaceMono.className} type="submit">Find me restaurants</button>
 
             </form>
 
