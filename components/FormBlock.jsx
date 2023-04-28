@@ -6,7 +6,7 @@ const FormBlock = () => {
         <div className="form-block">
 
             {/* add in form destination and get or post*/}
-            <form className={sora.className} action="/site-here" method="post">
+            <form className={sora.className} action="/" method="post">
 
                 {/* addreses */}
                 <fieldset className="form-addresses">
