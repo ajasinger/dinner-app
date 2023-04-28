@@ -12,11 +12,11 @@ const FormBlock = () => {
                 <fieldset className="form-addresses">
                     <legend><span className={spaceMono.className}>1.</span>Where is everyone coming from?</legend>
                     <label for="first-address">Neighborhood 1:</label>
-                    <input className={spaceMono.className} type="text" id="first-address" name="first-address" value="enter the name of a neightborhood" required />
+                    <input className={spaceMono.className} type="text" id="first-address" name="first-address" placeholder="enter the name of a neightborhood" />
                     <label for="second-address">Neighborhood 2:</label>
-                    <input className={spaceMono.className} type="text" id="second-address" name="second-address" value="enter the name of a neightborhood" />
+                    <input className={spaceMono.className} type="text" id="second-address" name="second-address" placeholder="enter the name of a neightborhood" />
                     <label for="third-address">Neighborhood 3:</label>
-                    <input className={spaceMono.className} type="text" id="third-address" name="third-address" value="enter the name of a neightborhood" />
+                    <input className={spaceMono.className} type="text" id="third-address" name="third-address" placeholder="enter the name of a neightborhood" />
                 </fieldset>
 
                 {/* mode of transportation */}
