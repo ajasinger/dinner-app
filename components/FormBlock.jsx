@@ -1,12 +1,25 @@
 import { sora, spaceMono } from "../utils/fonts";
+import { useState } from "react";
 
 const FormBlock = () => {
+
+    const [formEntry, setFormEntry] = useState(null);
+
+    const handleSubmit = (event) => {
+
+        //prevent browser from reloading page 
+        event.preventDefault();
+
+        
+        setFormEntry(event.target.value);
+    }
+    
     return (
 
         <div className="form-block">
 
             {/* add in form destination and get or post*/}
-            <form className={sora.className} action="/" method="post">
+            <form onSubmit={handleSubmit} className={sora.className} action="/" method="post">
 
                 {/* addreses */}
                 <fieldset className="form-addresses">
