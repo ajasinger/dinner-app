@@ -44,7 +44,7 @@ const FormBlock = () => {
                         value={formEntry.address1} 
                         onChange={handleChange} 
                         className={spaceMono.className} 
-                        placeholder="enter the name of a neightborhood" 
+                        placeholder="enter the: 'neighborhood, city, state'" 
                     />
                     <label htmlFor="address2">Neighborhood 2:</label>
                     <input 
@@ -54,7 +54,7 @@ const FormBlock = () => {
                         value={formEntry.address2} 
                         onChange={handleChange} 
                         className={spaceMono.className}
-                        placeholder="enter the name of a neightborhood" 
+                        placeholder="enter the: 'neighborhood, city, state'"
                     />
                     <label htmlFor="address3">Neighborhood 3:</label>
                     <input 
@@ -64,7 +64,7 @@ const FormBlock = () => {
                         value={formEntry.address3} 
                         onChange={handleChange}
                         className={spaceMono.className} 
-                        placeholder="enter the name of a neightborhood" 
+                        placeholder="enter the: 'neighborhood, city, state'"
                 />
                 </fieldset>
 
