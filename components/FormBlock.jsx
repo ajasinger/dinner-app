@@ -31,14 +31,13 @@ const FormBlock = () => {
 
     //event handler for form entry
     const handleChange = e => {
-        
         setFormEntry({
             ...formEntry,
-            [e.target.name] : e.target.value
-        
-        })
+            // use conditional statement -- if checkbox set target name to 
+            [e.target.name] : e.target.type === "checkbox" ? e.target.checked : e.target.value
+        });
 
-        console.log(formEntry)
+        console.log(formEntry);
     
     }
 
