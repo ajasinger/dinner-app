@@ -10,17 +10,36 @@ const FormBlock = () => {
         car: false,
         publicTransportation: false,
         publicTransportationAndCar: false,
+        meeting: false,
+        dateNight: false, 
+        drinks: false,
+        brunch: false,
+        italian: false,
+        newAmerican: false,
+        japanese: false,
+        mexican: false,
+        chinese: false,
+        french: false,
+        mediterranean: false,
+        any: false,
+        inexpensive: false,
+        midPriced: false,
+        expensive: false
     }
 
     const [formEntry, setFormEntry] = useState({ initialState });
 
     //event handler for form entry
     const handleChange = e => {
+        
         setFormEntry({
-            ...state,
+            ...formEntry,
             [e.target.name] : e.target.value
+        
         })
-        // setFormEntry(e.target.value);
+
+        console.log(formEntry)
+    
     }
 
     //event handler for submit
@@ -88,22 +107,22 @@ const FormBlock = () => {
                     <label htmlFor="car">Car</label>
                     <input 
                         type="radio" 
-                        id="public-transportation" 
+                        id="publicTransportation" 
                         name="transportation" 
                         value="publicTransportation"
                         checked= {formEntry.transportation === "publicTransportation"}
                         onChange={handleChange}
                     />
-                    <label htmlFor="public-transportation">Public Transportation</label>
+                    <label htmlFor="publicTransportation">Public Transportation</label>
                     <input 
                         type="radio" 
-                        id="public-transportation-and-car" 
+                        id="publicTransportationAndCar" 
                         name="transportation" 
                         value="publicTransportationAndCar" 
                         checked= {formEntry.transportation === "publicTransportationAndCar"}
                         onChange={handleChange}
                     />
-                    <label htmlFor="public-transportation-and-car">Public Transportation & Car</label>
+                    <label htmlFor="publicTransportationAndCar">Public Transportation & Car</label>
                 </fieldset>
 
                 {/* event type */}
@@ -112,29 +131,37 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="meeting" 
-                        name="event-type" 
-                        value="meeting" 
+                        name="eventType" 
+                        value="meeting"
+                        checked={formEntry.meeting}
+                        onChange={handleChange}
                     />
                     <label htmlFor="meeting">Meeting</label>
                     <input 
                         type="checkbox" 
-                        id="date-night" 
-                        name="event-type" 
-                        value="date-night" 
+                        id="dateNight" 
+                        name="eventType" 
+                        value="dateNight" 
+                        checked={formEntry.dateNight}
+                        onChange={handleChange}
                     />
-                    <label htmlFor="date-night">Date Night</label>
+                    <label htmlFor="dateNight">Date Night</label>
                     <input 
                         type="checkbox" 
                         id="drinks" 
-                        name="event-type" 
+                        name="eventType" 
                         value="drinks" 
+                        checked={formEntry.drinks}
+                        onChange={handleChange}
                     />
                     <label htmlFor="drinks">Drinks</label>
                     <input 
                         type="checkbox" 
                         id="brunch" 
-                        name="event-type" 
+                        name="eventType" 
                         value="brunch" 
+                        checked={formEntry.brunch}
+                        onChange={handleChange}
                     />
                     <label htmlFor="brunch">Brunch</label>
                 </fieldset>
@@ -145,57 +172,73 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="italian" 
-                        name="food-type" 
+                        name="foodType" 
                         value="italian" 
+                        checked={formEntry.italian}
+                        onChange={handleChange}
                     />
                     <label htmlFor="italian">Italian</label>
                     <input 
                         type="checkbox" 
-                        id="new-american" 
-                        name="food-type" 
-                        value="new-american" 
+                        id="newAmerican" 
+                        name="foodType" 
+                        value="newAmerican" 
+                        checked={formEntry.newAmerican}
+                        onChange={handleChange}
                     />
-                    <label htmlFor="new-american">New American</label>
+                    <label htmlFor="newAmerican">New American</label>
                     <input 
                         type="checkbox" 
                         id="japanese" 
-                        name="food-type" 
+                        name="foodType" 
                         value="japanese" 
+                        checked={formEntry.japanese}
+                        onChange={handleChange}
                     />
                     <label htmlFor="japanese">Japanese</label>
                     <input 
                         type="checkbox" 
                         id="mexican" 
-                        name="food-type" 
+                        name="foodType" 
                         value="mexican" 
+                        checked={formEntry.mexican}
+                        onChange={handleChange}
                     />
                     <label htmlFor="mexican">Mexican</label>
                     <input 
                         type="checkbox" 
                         id="chinese" 
-                        name="food-type" 
+                        name="foodType" 
                         value="chinese" 
+                        checked={formEntry.chinese}
+                        onChange={handleChange}
                     />
                     <label htmlFor="chinese">Chinese</label>
                     <input 
                         type="checkbox" 
                         id="french" 
-                        name="food-type" 
+                        name="foodType" 
                         value="french" 
+                        checked={formEntry.french}
+                        onChange={handleChange}
                     />
                     <label htmlFor="french">French</label>
                     <input 
                         type="checkbox" 
                         id="mediterranean" 
-                        name="food-type" 
+                        name="foodType" 
                         value="mediterranean"
+                        checked={formEntry.mediterranean}
+                        onChange={handleChange}
                     />
                     <label htmlFor="mediterranean">Mediterranean</label>
                     <input 
                         type="checkbox" 
                         id="any" 
-                        name="food-type" 
+                        name="foodType" 
                         value="any" 
+                        checked={formEntry.any}
+                        onChange={handleChange}
                     />
                     <label htmlFor="any">Any</label>
                 </fieldset>
@@ -208,20 +251,26 @@ const FormBlock = () => {
                         id="inexpensive" 
                         name="price" 
                         value="inexpensive" 
+                        checked={formEntry.inexpensive}
+                        onChange={handleChange}
                     />
                     <label htmlFor="inexpensive">$$</label>
                     <input 
                         type="checkbox" 
-                        id="moderate-price" 
+                        id="midPriced" 
                         name="price" 
-                        value="moderate-price" 
+                        value="midPriced" 
+                        checked={formEntry.midPriced}
+                        onChange={handleChange}
                     />
-                    <label htmlFor="moderate-price">$$$</label>
+                    <label htmlFor="midPriced">$$$</label>
                     <input 
                         type="checkbox" 
                         id="expensive" 
                         name="price" 
                         value="expensive" 
+                        checked={formEntry.expensive}
+                        onChange={handleChange}
                     />
                     <label htmlFor="expensive">$$$$</label>
                 </fieldset>
