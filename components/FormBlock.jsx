@@ -47,7 +47,8 @@ const FormBlock = () => {
         //prevent browser from reloading page 
         event.preventDefault();
 
-        console.log(address1);
+        //reset form to initial state
+        
     }
     
     return (
