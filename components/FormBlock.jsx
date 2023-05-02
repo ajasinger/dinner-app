@@ -8,13 +8,19 @@ const FormBlock = () => {
         address2: '',
         adddress3: '',
         car: false,
+        publicTransportation: false,
+        publicTransportationAndCar: false,
     }
 
     const [formEntry, setFormEntry] = useState({ initialState });
 
     //event handler for form entry
     const handleChange = e => {
-        setFormEntry(e.target.value);
+        setFormEntry({
+            ...state,
+            [e.target.name] : e.target.value
+        })
+        // setFormEntry(e.target.value);
     }
 
     //event handler for submit
@@ -76,6 +82,8 @@ const FormBlock = () => {
                         id="car" 
                         name="transportation" 
                         value="car" 
+                        checked= {formEntry.transportation === "car"}
+                        onChange={handleChange}
                     />
                     <label htmlFor="car">Car</label>
                     <input 
@@ -83,6 +91,8 @@ const FormBlock = () => {
                         id="public-transportation" 
                         name="transportation" 
                         value="publicTransportation"
+                        checked= {formEntry.transportation === "publicTransportation"}
+                        onChange={handleChange}
                     />
                     <label htmlFor="public-transportation">Public Transportation</label>
                     <input 
@@ -90,6 +100,8 @@ const FormBlock = () => {
                         id="public-transportation-and-car" 
                         name="transportation" 
                         value="publicTransportationAndCar" 
+                        checked= {formEntry.transportation === "publicTransportationAndCar"}
+                        onChange={handleChange}
                     />
                     <label htmlFor="public-transportation-and-car">Public Transportation & Car</label>
                 </fieldset>
