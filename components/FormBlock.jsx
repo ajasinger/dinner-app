@@ -10,21 +10,27 @@ const FormBlock = () => {
         car: false,
         publicTransportation: false,
         publicTransportationAndCar: false,
-        meeting: false,
-        dateNight: false, 
-        drinks: false,
-        brunch: false,
-        italian: false,
-        newAmerican: false,
-        japanese: false,
-        mexican: false,
-        chinese: false,
-        french: false,
-        mediterranean: false,
-        any: false,
-        inexpensive: false,
-        midPriced: false,
-        expensive: false
+        eventType: {
+            meeting: false,
+            dateNight: false, 
+            drinks: false,
+            brunch: false
+        },
+        foodType: {
+            italian: false,
+            newAmerican: false,
+            japanese: false,
+            mexican: false,
+            chinese: false,
+            french: false,
+            mediterranean: false,
+            any: false
+        },
+        price: {
+            inexpensive: false,
+            midPriced: false,
+            expensive: false
+        }
     }
 
     const [formEntry, setFormEntry] = useState({ initialState });
@@ -48,7 +54,7 @@ const FormBlock = () => {
         event.preventDefault();
 
         //reset form to initial state
-        
+
     }
     
     return (
@@ -131,8 +137,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="meeting" 
-                        name="eventType" 
-                        value="meeting"
+                        name="meeting" 
                         checked={formEntry.meeting}
                         onChange={handleChange}
                     />
@@ -140,8 +145,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="dateNight" 
-                        name="eventType" 
-                        value="dateNight" 
+                        name="dateNight" 
                         checked={formEntry.dateNight}
                         onChange={handleChange}
                     />
@@ -149,8 +153,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="drinks" 
-                        name="eventType" 
-                        value="drinks" 
+                        name="drinks" 
                         checked={formEntry.drinks}
                         onChange={handleChange}
                     />
@@ -158,8 +161,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="brunch" 
-                        name="eventType" 
-                        value="brunch" 
+                        name="brunch" 
                         checked={formEntry.brunch}
                         onChange={handleChange}
                     />
@@ -172,8 +174,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="italian" 
-                        name="foodType" 
-                        value="italian" 
+                        name="italian" 
                         checked={formEntry.italian}
                         onChange={handleChange}
                     />
@@ -181,8 +182,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="newAmerican" 
-                        name="foodType" 
-                        value="newAmerican" 
+                        name="newAmerican" 
                         checked={formEntry.newAmerican}
                         onChange={handleChange}
                     />
@@ -190,8 +190,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="japanese" 
-                        name="foodType" 
-                        value="japanese" 
+                        name="japanese" 
                         checked={formEntry.japanese}
                         onChange={handleChange}
                     />
@@ -199,8 +198,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="mexican" 
-                        name="foodType" 
-                        value="mexican" 
+                        name="mexican" 
                         checked={formEntry.mexican}
                         onChange={handleChange}
                     />
@@ -208,8 +206,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="chinese" 
-                        name="foodType" 
-                        value="chinese" 
+                        name="chinese" 
                         checked={formEntry.chinese}
                         onChange={handleChange}
                     />
@@ -217,8 +214,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="french" 
-                        name="foodType" 
-                        value="french" 
+                        name="french" 
                         checked={formEntry.french}
                         onChange={handleChange}
                     />
@@ -226,8 +222,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="mediterranean" 
-                        name="foodType" 
-                        value="mediterranean"
+                        name="mediterranean"
                         checked={formEntry.mediterranean}
                         onChange={handleChange}
                     />
@@ -235,8 +230,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="any" 
-                        name="foodType" 
-                        value="any" 
+                        name="any" 
                         checked={formEntry.any}
                         onChange={handleChange}
                     />
@@ -249,8 +243,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="inexpensive" 
-                        name="price" 
-                        value="inexpensive" 
+                        name="inexpensive" 
                         checked={formEntry.inexpensive}
                         onChange={handleChange}
                     />
@@ -258,8 +251,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="midPriced" 
-                        name="price" 
-                        value="midPriced" 
+                        name="midPriced" 
                         checked={formEntry.midPriced}
                         onChange={handleChange}
                     />
@@ -267,8 +259,7 @@ const FormBlock = () => {
                     <input 
                         type="checkbox" 
                         id="expensive" 
-                        name="price" 
-                        value="expensive" 
+                        name="expensive" 
                         checked={formEntry.expensive}
                         onChange={handleChange}
                     />
