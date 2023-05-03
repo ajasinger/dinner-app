@@ -39,19 +39,18 @@ const FormBlock = () => {
     const handleChange = e => {
         setFormEntry({
             ...formEntry,
-            // use conditional statement -- if checkbox set target name to 
             [e.target.name] : e.target.type === "checkbox" ? e.target.checked : e.target.value
         });
-
-        console.log(formEntry);
-    
     }
 
     //event handler for submit
-    const handleSubmit = (event) => {
+    const handleSubmit = event => {
 
         //prevent browser from reloading page 
         event.preventDefault();
+
+        //updated formEntry object 
+       
 
         //reset form to initial state
 
@@ -267,7 +266,13 @@ const FormBlock = () => {
                 </fieldset>
 
                 {/* button */}
-                <button className={spaceMono.className} type="submit">Find me restaurants</button>
+                <button 
+                    // onClick={handleSubmit}
+                    className={spaceMono.className} 
+                    type="submit"
+                >
+                Find me restaurants
+                </button>
 
             </form>
 
