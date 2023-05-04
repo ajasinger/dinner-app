@@ -4,19 +4,21 @@ export default function handler(req, res) {
   res.status(200).json({ name: 'John Doe' })
 }
 
-
-//chatGPT prompt 
-// const completion = await openai.createCompletion({
-//   model: "text-davinci-003",
-//   prompt: 
-//   `Create an inspiring motivational quote based on the following topic. \n
-//   Topic:${prompt}\n
-//   Motivational quote:`,
-//   max_tokens: 500, 
-//   temperature: 1,
-//   presence_penalty: 0,
-//   frequency_penalty: 0
-// });
+//async funtion to fetch data 
+const fetchData = async () => {
+  try {
+    const response = await fetch('https://api.openai.com/va/completions', {
+      method: 'POST',
+      body: JSON.stringify({id:200})
+    })
+    if(response.ok) {
+      const openAiResponse = await response.json();
+    }
+    throw new Error('Request failed');
+  } catch(error) {
+    console.log(error);
+  }
+};
 
 // fetch("https://api.openai.com/va/completions", {
 //   method: "POST",
