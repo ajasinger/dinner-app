@@ -49,10 +49,11 @@ const FormBlock = () => {
         //prevent browser from reloading page 
         event.preventDefault();
 
-        //updated formEntry object 
+        //save formEntry data  
        
 
         //reset form to initial state
+        setFormEntry({initialState});
 
     }
     
