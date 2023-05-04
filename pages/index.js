@@ -19,8 +19,8 @@ export default function Home() {
         < HeaderBlock />
         < FormBlock />
         {/* Conditional rendering of AnswerBlock
-        {!!openAIResponse && (
-            <AnswerBlock openAIResponse={openAIResponse} />
+        {!!recommendations && (
+            <AnswerBlock recommendations={recommendations} />
         )}
          */}
 
