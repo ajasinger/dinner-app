@@ -9,7 +9,17 @@ const fetchData = async () => {
   try {
     const response = await fetch('https://api.openai.com/va/completions', {
       method: 'POST',
-      body: JSON.stringify({id:200})
+//    headers: {
+//      Authorization: `Bearer ${OPENAI_API_KEY}`,
+//      "Content-Type": "application/json"
+//    },
+      body: JSON.stringify({
+        model: "text-davinci-003",
+        prompt: "",
+        //https://platform.openai.com/tokenizer
+        max_tokens: 500,
+        temperature: 1,
+      })
     })
     if(response.ok) {
       const openAiResponse = await response.json();
@@ -19,22 +29,6 @@ const fetchData = async () => {
     console.log(error);
   }
 };
-
-// fetch("https://api.openai.com/va/completions", {
-//   method: "POST",
-//   headers: {
-//     Authorization: `Bearer ${OPENAI_API_KEY}`,
-//     "Content-Type": "application/json"
-//   },
-//   body: JSON.stringify({
-//     model: "text-davinci-003",
-//     prompt: "",
-//     //https://platform.openai.com/tokenizer
-//     max_tokens: 500,
-//     temperature: 1,
-//     //n - how many responses to give 
-//   })
-// })
 
 //send response to front-end 
 //const recommendations = 
