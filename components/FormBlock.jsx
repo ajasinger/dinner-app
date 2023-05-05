@@ -7,9 +7,6 @@ const FormBlock = () => {
         address1: '',
         address2: '',
         adddress3: '',
-        car: false,
-        publicTransportation: false,
-        publicTransportationAndCar: false,
         eventType: {
             meeting: false,
             dateNight: false, 
@@ -65,7 +62,7 @@ const FormBlock = () => {
             <form onSubmit={handleSubmit} className={sora.className} action="/" method="post">
 
                 {/* addreses */}
-                <fieldset className="form-addresses">
+                <fieldset className="form-address">
                     <legend><span className={spaceMono.className}>1.</span>Where is everyone coming from?</legend>
                     <label htmlFor="address1">Neighborhood 1:</label>
                     <input 
@@ -75,7 +72,7 @@ const FormBlock = () => {
                         value={formEntry.address1} 
                         onChange={handleChange} 
                         className={spaceMono.className} 
-                        placeholder="enter the: 'neighborhood, city, state'" 
+                        placeholder="enter the neighborhood" 
                     />
                     <label htmlFor="address2">Neighborhood 2:</label>
                     <input 
@@ -85,7 +82,7 @@ const FormBlock = () => {
                         value={formEntry.address2} 
                         onChange={handleChange} 
                         className={spaceMono.className}
-                        placeholder="enter the: 'neighborhood, city, state'"
+                        placeholder="enter the neighborhood"
                     />
                     <label htmlFor="address3">Neighborhood 3:</label>
                     <input 
@@ -95,40 +92,8 @@ const FormBlock = () => {
                         value={formEntry.address3} 
                         onChange={handleChange}
                         className={spaceMono.className} 
-                        placeholder="enter the: 'neighborhood, city, state'"
+                        placeholder="enter the neighborhood"
                 />
-                </fieldset>
-
-                {/* mode of transportation */}
-                <fieldset className="form-transportation">
-                    <legend><span className={spaceMono.className}>2.</span>How is everyone getting there? (select one)</legend>
-                    <input 
-                        type="radio" 
-                        id="car" 
-                        name="transportation" 
-                        value="car" 
-                        checked= {formEntry.transportation === "car"}
-                        onChange={handleChange}
-                    />
-                    <label htmlFor="car">Car</label>
-                    <input 
-                        type="radio" 
-                        id="publicTransportation" 
-                        name="transportation" 
-                        value="publicTransportation"
-                        checked= {formEntry.transportation === "publicTransportation"}
-                        onChange={handleChange}
-                    />
-                    <label htmlFor="publicTransportation">Public Transportation</label>
-                    <input 
-                        type="radio" 
-                        id="publicTransportationAndCar" 
-                        name="transportation" 
-                        value="publicTransportationAndCar" 
-                        checked= {formEntry.transportation === "publicTransportationAndCar"}
-                        onChange={handleChange}
-                    />
-                    <label htmlFor="publicTransportationAndCar">Public Transportation & Car</label>
                 </fieldset>
 
                 {/* event type */}
