@@ -18,11 +18,8 @@ export default function Home() {
       <main className={styles.main}>
         < HeaderBlock />
         < FormBlock />
-        {/* Conditional rendering of AnswerBlock
-        {!!recommendations && (
-            <AnswerBlock recommendations={recommendations} />
-        )}
-         */}
+        < AnswerBlock recommendations={recommendations} />
+        
 
       </main>
     </div>
