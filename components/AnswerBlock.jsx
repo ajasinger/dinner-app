@@ -1,6 +1,10 @@
 import { sora, spaceMono } from "../utils/fonts";
+import { useState } from "react";
 
 // define formResponse
+const [recommendations, setRecommendations] = useState("");
+const [recsLoading, setRecsLoading] = useState(false);
+const [recsError, setRecsError] = useState(false);
 
 const AnswerBlock = ({formResponse}) => {
     return (
