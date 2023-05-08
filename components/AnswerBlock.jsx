@@ -13,7 +13,6 @@ const AnswerBlock = ({formResponse}) => {
             { recsError && "Something went wrong, please try again..."}
             { recommendations && <p className={sora.className}>{recommendations}</p>}
             <p className={sora.className}>{formResponse.text}</p>
-            {/* how to separate out this styling??? */}
             <button className={`${spaceMono.className} ${styles.purpleButton}`}>Share list</button>
             <button className={`${spaceMono.className} ${styles.lilacButton}`}>Save list</button>
         </div>
