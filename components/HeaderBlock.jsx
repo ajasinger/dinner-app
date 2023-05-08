@@ -5,7 +5,7 @@ const HeaderBlock = () => {
         <div className="header-block">
             <h1 className={sora.className}>Who's Coming to Dinner</h1>
             <h2 className={spaceMono.className}>
-                Your AI enabled restaurant finder &mdash; find the most convenient 
+                Your AI enabled New York restaurant finder &mdash; find the most convenient 
                 (and tasty) restaurant for you and your crew.
             </h2>
         </div>
