@@ -9,7 +9,10 @@ const [recsError, setRecsError] = useState(false);
 const AnswerBlock = ({formResponse}) => {
     return (
         <div className="answer-block">
-            <h2 className={spaceMono.className}>Your restaurants</h2>
+            <h2 className={spaceMono.className}>Your restaurants:</h2>
+            { recsLoading && "Please wait..."}
+            { recsError && "Something went wrong, please try again..."}
+            { recommendations && <p className={sora.className}>{recommendations}</p>}
             <p className={sora.className}>{formResponse.text}</p>
             {/* how to separate out this styling??? */}
             <button className={`${spaceMono.className} ${styles.purpleButton}`}>Share list</button>
