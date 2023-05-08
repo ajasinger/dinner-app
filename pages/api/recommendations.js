@@ -32,4 +32,5 @@ const fetchData = async () => {
 };
 
 //send response to front-end 
-//const recommendations = 
+const recommendations = completion.data.choices[0].text;
+res.status(200).json({ recommendations })
