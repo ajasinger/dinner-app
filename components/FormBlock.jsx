@@ -50,6 +50,8 @@ const FormBlock = () => {
         event.preventDefault();
 
         //save formEntry data  
+
+        //create prompt for API
         const prompt = 
        
 
