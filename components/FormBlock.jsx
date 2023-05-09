@@ -6,8 +6,7 @@ const FormBlock = () => {
     const initialState = {
         address1: '',
         address2: '',
-        adddress3: '',
-        state: '',
+        address3: '',
         eventType: {
             meeting: false,
             dateNight: false, 
@@ -31,7 +30,7 @@ const FormBlock = () => {
         }
     }
 
-    const [formEntry, setFormEntry] = useState({ initialState });
+    const [formEntry, setFormEntry] = useState(initialState);
 
     //event handler for form entry
     const handleChange = e => {
@@ -49,10 +48,14 @@ const FormBlock = () => {
         //prevent browser from reloading page 
         event.preventDefault();
 
-        //save formEntry data  
+        //make new instance of formEntry to refer back to?
 
         //create prompt for API
-        const prompt = 
+        //const neighborhoodSelections = use value of each "`${?address1}`, `${?address2}`, `${?address2}`"
+        // for these if the value is true need the property's key 
+        //const eventSelections = string of all true event types 
+        //const foodSelections = string of all true food types 
+        //const priceSelections = string of all true prices 
        
 
         //reset form to initial state
@@ -109,7 +112,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="meeting" 
                         name="meeting" 
-                        checked={formEntry.meeting}
+                        checked={formEntry.eventType.meeting}
                         onChange={handleChange}
                     />
                     <label htmlFor="meeting">Meeting</label>
@@ -117,7 +120,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="dateNight" 
                         name="dateNight" 
-                        checked={formEntry.dateNight}
+                        checked={formEntry.eventType.dateNight}
                         onChange={handleChange}
                     />
                     <label htmlFor="dateNight">Date Night</label>
@@ -125,7 +128,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="drinks" 
                         name="drinks" 
-                        checked={formEntry.drinks}
+                        checked={formEntry.eventType.drinks}
                         onChange={handleChange}
                     />
                     <label htmlFor="drinks">Drinks</label>
@@ -133,7 +136,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="brunch" 
                         name="brunch" 
-                        checked={formEntry.brunch}
+                        checked={formEntry.eventType.brunch}
                         onChange={handleChange}
                     />
                     <label htmlFor="brunch">Brunch</label>
@@ -146,7 +149,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="italian" 
                         name="italian" 
-                        checked={formEntry.italian}
+                        checked={formEntry.foodType.italian}
                         onChange={handleChange}
                     />
                     <label htmlFor="italian">Italian</label>
@@ -154,7 +157,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="newAmerican" 
                         name="newAmerican" 
-                        checked={formEntry.newAmerican}
+                        checked={formEntry.foodType.newAmerican}
                         onChange={handleChange}
                     />
                     <label htmlFor="newAmerican">New American</label>
@@ -162,7 +165,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="japanese" 
                         name="japanese" 
-                        checked={formEntry.japanese}
+                        checked={formEntry.foodType.japanese}
                         onChange={handleChange}
                     />
                     <label htmlFor="japanese">Japanese</label>
@@ -170,7 +173,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="mexican" 
                         name="mexican" 
-                        checked={formEntry.mexican}
+                        checked={formEntry.foodType.mexican}
                         onChange={handleChange}
                     />
                     <label htmlFor="mexican">Mexican</label>
@@ -178,7 +181,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="chinese" 
                         name="chinese" 
-                        checked={formEntry.chinese}
+                        checked={formEntry.foodType.chinese}
                         onChange={handleChange}
                     />
                     <label htmlFor="chinese">Chinese</label>
@@ -186,7 +189,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="french" 
                         name="french" 
-                        checked={formEntry.french}
+                        checked={formEntry.foodType.french}
                         onChange={handleChange}
                     />
                     <label htmlFor="french">French</label>
@@ -194,7 +197,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="mediterranean" 
                         name="mediterranean"
-                        checked={formEntry.mediterranean}
+                        checked={formEntry.foodType.mediterranean}
                         onChange={handleChange}
                     />
                     <label htmlFor="mediterranean">Mediterranean</label>
@@ -202,7 +205,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="any" 
                         name="any" 
-                        checked={formEntry.any}
+                        checked={formEntry.foodType.any}
                         onChange={handleChange}
                     />
                     <label htmlFor="any">Any</label>
@@ -215,7 +218,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="inexpensive" 
                         name="inexpensive" 
-                        checked={formEntry.inexpensive}
+                        checked={formEntry.price.inexpensive}
                         onChange={handleChange}
                     />
                     <label htmlFor="inexpensive">$$</label>
@@ -223,7 +226,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="midPriced" 
                         name="midPriced" 
-                        checked={formEntry.midPriced}
+                        checked={formEntry.price.midPriced}
                         onChange={handleChange}
                     />
                     <label htmlFor="midPriced">$$$</label>
@@ -231,7 +234,7 @@ const FormBlock = () => {
                         type="checkbox" 
                         id="expensive" 
                         name="expensive" 
-                        checked={formEntry.expensive}
+                        checked={formEntry.price.expensive}
                         onChange={handleChange}
                     />
                     <label htmlFor="expensive">$$$$</label>
