@@ -18,7 +18,7 @@ export default function Home() {
       <main className={styles.main}>
         < HeaderBlock />
         < FormBlock />
-        < AnswerBlock recommendations={recommendations} />
+        {/* < AnswerBlock recommendations={recommendations} /> */}
         
 
       </main>
