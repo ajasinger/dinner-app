@@ -44,8 +44,6 @@ const FormBlock = () => {
 
     //event handler for submit
     const handleSubmit = event => {
-
-        //prevent browser from reloading page 
         event.preventDefault();
 
         //make new instance of formEntry to refer back to?
