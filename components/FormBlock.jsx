@@ -1,4 +1,3 @@
-import { sora, spaceMono } from "../utils/fonts";
 import { useState } from "react";
 
 const FormBlock = () => {
@@ -34,6 +33,17 @@ const FormBlock = () => {
 
     //event handler for form entry
     const handleChange = e => {
+        //setState in nested object 
+        if(formEntry.eventType) {
+            setFormEntry({
+                ...formEntry,
+                eventType: {
+                    ...formEntry.eventType,
+                    [e.target.name] : e.target.checked
+                } 
+            });
+        }
+
         setFormEntry({
             ...formEntry,
             [e.target.name] : e.target.type === "checkbox" ? e.target.checked : e.target.value
@@ -49,10 +59,15 @@ const FormBlock = () => {
         //make new instance of formEntry to refer back to?
 
         //create prompt for API
-        //const neighborhoodSelections = use value of each "`${?address1}`, `${?address2}`, `${?address2}`"
+        const neighborhoodSelections = `${address1}, ${address2}, ${address3}`;
+        
         // for these if the value is true need the property's key 
-        //const eventSelections = string of all true event types 
+        if(formEntry.eventType[e.target.checked]) {
+                let eventSelections = '';
+                eventSelections += `${e.target.name}, `;
+             }
         //const foodSelections = string of all true food types 
+
         //const priceSelections = string of all true prices 
        
 
@@ -66,11 +81,11 @@ const FormBlock = () => {
         <div className="form-block">
 
             {/* add in form destination and get or post*/}
-            <form onSubmit={handleSubmit} className={sora.className} action="/" method="post">
+            <form onSubmit={handleSubmit} action="/" method="post">
 
                 {/* addreses */}
                 <fieldset className="form-address">
-                    <legend><span className={spaceMono.className}>1.</span>Where is everyone coming from?</legend>
+                    <legend><span>1.</span>Where is everyone coming from?</legend>
                     <label htmlFor="address1">Neighborhood 1:</label>
                     <input 
                         type="text" 
@@ -78,7 +93,6 @@ const FormBlock = () => {
                         name="address1" 
                         value={formEntry.address1} 
                         onChange={handleChange} 
-                        className={spaceMono.className} 
                         placeholder="enter the neighborhood" 
                     />
                     <label htmlFor="address2">Neighborhood 2:</label>
@@ -88,7 +102,6 @@ const FormBlock = () => {
                         name="address2" 
                         value={formEntry.address2} 
                         onChange={handleChange} 
-                        className={spaceMono.className}
                         placeholder="enter the neighborhood"
                     />
                     <label htmlFor="address3">Neighborhood 3:</label>
@@ -98,14 +111,13 @@ const FormBlock = () => {
                         name="address3" 
                         value={formEntry.address3} 
                         onChange={handleChange}
-                        className={spaceMono.className} 
                         placeholder="enter the neighborhood"
                     />
                 </fieldset>
 
                 {/* event type */}
                 <fieldset className="form-event-type">
-                    <legend><span className={spaceMono.className}>3.</span>Would you like options that are good for any of the below? (select any amount)</legend>
+                    <legend><span>3.</span>Would you like options that are good for any of the below? (select any amount)</legend>
                     <input 
                         type="checkbox" 
                         id="meeting" 
@@ -143,7 +155,7 @@ const FormBlock = () => {
 
                 {/* food types */}
                 <fieldset className="form-food-type">
-                    <legend><span className={spaceMono.className}>4.</span>What type of food would you like to eat? (select any amount)</legend>
+                    <legend><span>4.</span>What type of food would you like to eat? (select any amount)</legend>
                     <input 
                         type="checkbox" 
                         id="italian" 
@@ -212,7 +224,7 @@ const FormBlock = () => {
 
                 {/* price point */}
                 <fieldset className="form-price">
-                    <legend><span className={spaceMono.className}>5.</span>What is your preferred price point? (select any amount)</legend>
+                    <legend><span>5.</span>What is your preferred price point? (select any amount)</legend>
                     <input 
                         type="checkbox" 
                         id="inexpensive" 
@@ -241,8 +253,6 @@ const FormBlock = () => {
 
                 {/* button */}
                 <button 
-                    // onClick={handleSubmit}
-                    className={spaceMono.className} 
                     type="submit"
                 >
                 Find me restaurants

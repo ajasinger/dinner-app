@@ -1,4 +1,3 @@
-import { sora, spaceMono } from "../utils/fonts";
 import { useState } from "react";
 
 const AnswerBlock = ({formResponse}) => {
@@ -8,13 +7,13 @@ const AnswerBlock = ({formResponse}) => {
 
     return (
         <div className="answer-block">
-            <h2 className={spaceMono.className}>Your restaurants:</h2>
+            <h2>Your restaurants:</h2>
             { recsLoading && "Please wait..."}
             { recsError && "Something went wrong, please try again..."}
-            { recommendations && <p className={sora.className}>{recommendations}</p>}
-            <p className={sora.className}>{formResponse.text}</p>
-            <button className={`${spaceMono.className} ${styles.purpleButton}`}>Share list</button>
-            <button className={`${spaceMono.className} ${styles.lilacButton}`}>Save list</button>
+            { recommendations && <p>{recommendations}</p>}
+            <p>{formResponse.text}</p>
+            <button>Share list</button>
+            <button>Save list</button>
         </div>
     );
 }
