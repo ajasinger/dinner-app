@@ -44,10 +44,10 @@ const FormBlock = () => {
             });
         }
 
-        setFormEntry({
-            ...formEntry,
-            [e.target.name] : e.target.type === "checkbox" ? e.target.checked : e.target.value
-        });
+        // setFormEntry({
+        //     ...formEntry,
+        //     [e.target.name] : e.target.type === "checkbox" ? e.target.checked : e.target.value
+        // });
 
         console.log(formEntry);
     }
@@ -61,6 +61,9 @@ const FormBlock = () => {
         //create prompt for API
         const neighborhoodSelections = `${address1}, ${address2}, ${address3}`;
         
+        //get object keys and use reducer function to accumulate onto string (if this is true I want to append aonto teh string) 
+        //do a for loop 
+        //make variable fo key name to prompt string 
         // for these if the value is true need the property's key 
         if(formEntry.eventType[e.target.checked]) {
                 let eventSelections = '';
