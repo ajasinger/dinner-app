@@ -1,0 +1,9 @@
+.header {
+    text-align: center;
+    padding: 3rem;
+    background-image: radial-gradient(#CDFF64, transparent)
+}
+
+.title {
+    padding-bottom: 2rem;
+}

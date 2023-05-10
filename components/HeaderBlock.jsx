@@ -1,11 +1,13 @@
+import styles from '@/styles/HeaderBlock.module.css'
+
 const HeaderBlock = () => {
     return (
-        <div className="header-block">
-            <h1>Who's Coming to Dinner</h1>
-            <h2>
+        <div className={styles.header}>
+            <h1 className={styles.title}>Who's Coming to Dinner</h1>
+            <h3>
                 Your AI enabled New York restaurant finder &mdash; find the most convenient 
                 (and tasty) restaurant for you and your crew.
-            </h2>
+            </h3>
         </div>
     );
 }
