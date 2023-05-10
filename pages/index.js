@@ -3,7 +3,6 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import HeaderBlock from '../components/HeaderBlock';
 import FormBlock from '../components/FormBlock';
-import AnswerBlock from '../components/AnswerBlock';
 
 export default function Home() {
   return (
@@ -18,9 +17,6 @@ export default function Home() {
       <main className={styles.main}>
         < HeaderBlock />
         < FormBlock />
-        {/* < AnswerBlock recommendations={recommendations} /> */}
-        
-
       </main>
     </div>
   )
