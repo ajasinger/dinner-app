@@ -11,7 +11,6 @@ const AnswerBlock = ({formResponse}) => {
             { recsLoading && "Please wait..."}
             { recsError && "Something went wrong, please try again..."}
             { recommendations && <p>{recommendations}</p>}
-            <p>{formResponse.text}</p>
             <button>Share list</button>
             <button>Save list</button>
         </div>
