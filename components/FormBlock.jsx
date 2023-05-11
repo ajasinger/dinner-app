@@ -42,6 +42,14 @@ const FormBlock = () => {
                     [e.target.name] : e.target.checked
                 } 
             });
+        } else if(formEntry.foodType){
+            setFormEntry({
+                ...formEntry,
+                foodType: {
+                    ...formEntry.foodType,
+                    [e.target.name] : e.target.checked
+                } 
+            });
         }
 
         // setFormEntry({
