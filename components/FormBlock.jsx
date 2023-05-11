@@ -31,32 +31,45 @@ const FormBlock = () => {
 
     const [formEntry, setFormEntry] = useState(initialState);
 
-    //event handler for form entry
-    const handleChange = e => {
-        //setState in nested object 
-        if(formEntry.eventType) {
-            setFormEntry({
-                ...formEntry,
-                eventType: {
-                    ...formEntry.eventType,
-                    [e.target.name] : e.target.checked
-                } 
-            });
-        } else if(formEntry.foodType){
-            setFormEntry({
-                ...formEntry,
-                foodType: {
-                    ...formEntry.foodType,
-                    [e.target.name] : e.target.checked
-                } 
-            });
-        }
+    //event handlers for form entry
+    const handleAddressChange = e => {
+        setFormEntry({
+            ...formEntry,
+            [e.target.name] : e.target.value
+        });
+        console.log(formEntry);
+    }
 
-        // setFormEntry({
-        //     ...formEntry,
-        //     [e.target.name] : e.target.type === "checkbox" ? e.target.checked : e.target.value
-        // });
+    const handleEventTypeChange = e => {
+        setFormEntry({
+            ...formEntry,
+            eventType: {
+                ...formEntry.eventType,
+                [e.target.name] : e.target.checked
+            } 
+        });
+        console.log(formEntry);
+    }
 
+    const handleFoodTypeChange = e => {
+        setFormEntry({
+            ...formEntry,
+            foodType: {
+                ...formEntry.foodType,
+                [e.target.name] : e.target.checked
+            } 
+        });
+        console.log(formEntry);
+    }
+
+    const handlePriceChange = e => {
+        setFormEntry({
+            ...formEntry,
+            price: {
+                ...formEntry.price,
+                [e.target.name] : e.target.checked
+            }
+        });
         console.log(formEntry);
     }
 
@@ -103,7 +116,7 @@ const FormBlock = () => {
                         id="address1" 
                         name="address1" 
                         value={formEntry.address1} 
-                        onChange={handleChange} 
+                        onChange={handleAddressChange} 
                         placeholder="enter the neighborhood" 
                     />
                     <label htmlFor="address2">Neighborhood 2:</label>
@@ -112,7 +125,7 @@ const FormBlock = () => {
                         id="address2" 
                         name="address2" 
                         value={formEntry.address2} 
-                        onChange={handleChange} 
+                        onChange={handleAddressChange} 
                         placeholder="enter the neighborhood"
                     />
                     <label htmlFor="address3">Neighborhood 3:</label>
@@ -121,7 +134,7 @@ const FormBlock = () => {
                         id="address3" 
                         name="address3" 
                         value={formEntry.address3} 
-                        onChange={handleChange}
+                        onChange={handleAddressChange}
                         placeholder="enter the neighborhood"
                     />
                 </fieldset>
@@ -134,7 +147,7 @@ const FormBlock = () => {
                         id="meeting" 
                         name="meeting" 
                         checked={formEntry.eventType.meeting}
-                        onChange={handleChange}
+                        onChange={handleEventTypeChange}
                         // className={formEntry ? "checked" : ""}
                     />
                     <label htmlFor="meeting">Meeting</label>
@@ -143,7 +156,7 @@ const FormBlock = () => {
                         id="dateNight" 
                         name="dateNight" 
                         checked={formEntry.eventType.dateNight}
-                        onChange={handleChange}
+                        onChange={handleEventTypeChange}
                     />
                     <label htmlFor="dateNight">Date Night</label>
                     <input 
@@ -151,7 +164,7 @@ const FormBlock = () => {
                         id="drinks" 
                         name="drinks" 
                         checked={formEntry.eventType.drinks}
-                        onChange={handleChange}
+                        onChange={handleEventTypeChange}
                     />
                     <label htmlFor="drinks">Drinks</label>
                     <input 
@@ -159,7 +172,7 @@ const FormBlock = () => {
                         id="brunch" 
                         name="brunch" 
                         checked={formEntry.eventType.brunch}
-                        onChange={handleChange}
+                        onChange={handleEventTypeChange}
                     />
                     <label htmlFor="brunch">Brunch</label>
                 </fieldset>
@@ -172,7 +185,7 @@ const FormBlock = () => {
                         id="italian" 
                         name="italian" 
                         checked={formEntry.foodType.italian}
-                        onChange={handleChange}
+                        onChange={handleFoodTypeChange}
                     />
                     <label htmlFor="italian">Italian</label>
                     <input 
@@ -180,7 +193,7 @@ const FormBlock = () => {
                         id="newAmerican" 
                         name="newAmerican" 
                         checked={formEntry.foodType.newAmerican}
-                        onChange={handleChange}
+                        onChange={handleFoodTypeChange}
                     />
                     <label htmlFor="newAmerican">New American</label>
                     <input 
@@ -188,7 +201,7 @@ const FormBlock = () => {
                         id="japanese" 
                         name="japanese" 
                         checked={formEntry.foodType.japanese}
-                        onChange={handleChange}
+                        onChange={handleFoodTypeChange}
                     />
                     <label htmlFor="japanese">Japanese</label>
                     <input 
@@ -196,7 +209,7 @@ const FormBlock = () => {
                         id="mexican" 
                         name="mexican" 
                         checked={formEntry.foodType.mexican}
-                        onChange={handleChange}
+                        onChange={handleFoodTypeChange}
                     />
                     <label htmlFor="mexican">Mexican</label>
                     <input 
@@ -204,7 +217,7 @@ const FormBlock = () => {
                         id="chinese" 
                         name="chinese" 
                         checked={formEntry.foodType.chinese}
-                        onChange={handleChange}
+                        onChange={handleFoodTypeChange}
                     />
                     <label htmlFor="chinese">Chinese</label>
                     <input 
@@ -212,7 +225,7 @@ const FormBlock = () => {
                         id="french" 
                         name="french" 
                         checked={formEntry.foodType.french}
-                        onChange={handleChange}
+                        onChange={handleFoodTypeChange}
                     />
                     <label htmlFor="french">French</label>
                     <input 
@@ -220,7 +233,7 @@ const FormBlock = () => {
                         id="mediterranean" 
                         name="mediterranean"
                         checked={formEntry.foodType.mediterranean}
-                        onChange={handleChange}
+                        onChange={handleFoodTypeChange}
                     />
                     <label htmlFor="mediterranean">Mediterranean</label>
                     <input 
@@ -228,7 +241,7 @@ const FormBlock = () => {
                         id="any" 
                         name="any" 
                         checked={formEntry.foodType.any}
-                        onChange={handleChange}
+                        onChange={handleFoodTypeChange}
                     />
                     <label htmlFor="any">Any</label>
                 </fieldset>
@@ -241,7 +254,7 @@ const FormBlock = () => {
                         id="inexpensive" 
                         name="inexpensive" 
                         checked={formEntry.price.inexpensive}
-                        onChange={handleChange}
+                        onChange={handlePriceChange}
                     />
                     <label htmlFor="inexpensive">$$</label>
                     <input 
@@ -249,7 +262,7 @@ const FormBlock = () => {
                         id="midPriced" 
                         name="midPriced" 
                         checked={formEntry.price.midPriced}
-                        onChange={handleChange}
+                        onChange={handlePriceChange}
                     />
                     <label htmlFor="midPriced">$$$</label>
                     <input 
@@ -257,7 +270,7 @@ const FormBlock = () => {
                         id="expensive" 
                         name="expensive" 
                         checked={formEntry.price.expensive}
-                        onChange={handleChange}
+                        onChange={handlePriceChange}
                     />
                     <label htmlFor="expensive">$$$$</label>
                 </fieldset>
