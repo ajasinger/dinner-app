@@ -77,11 +77,22 @@ const FormBlock = () => {
     const handleSubmit = event => {
         event.preventDefault();
 
+        //variables to replace multi-word properties
+        const dateNightString = "date night";
+        const newAmericanString = "new american";
+        const midPricedString = "mid-priced";
+
         //make new instance of formEntry to refer back to?
 
         //create prompt for API
         const neighborhoodSelections = `${address1}, ${address2}, ${address3}`;
+        console.log(neighborhoodSelecctions)
+
+        //using reduce()
+
+        //using for loop
         
+        //if value is true object.keys()
         //get object keys and use reducer function to accumulate onto string (if this is true I want to append aonto teh string) 
         //do a for loop 
         //make variable fo key name to prompt string 
@@ -93,7 +104,6 @@ const FormBlock = () => {
         //const foodSelections = string of all true food types 
 
         //const priceSelections = string of all true prices 
-       
 
         //reset form to initial state
         setFormEntry({initialState});
