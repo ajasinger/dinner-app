@@ -1,9 +1,38 @@
 .header {
     text-align: center;
     padding: 3rem;
-    background-image: radial-gradient(#CDFF64, transparent)
+    background-image: radial-gradient(#CDFF64, transparent);
+    position: relative;
 }
 
 .title {
     padding-bottom: 2rem;
+}
+
+.ramen {
+    position: absolute;
+}
+
+.taco {
+    position: absolute;
+}
+
+.pizza {
+    position: absolute;
+}
+
+.sushi {
+    position: absolute;
+}
+
+.spaghetti {
+    position: absolute;
+}
+
+salad {
+    position: absolute;
+}
+
+.hamburger {
+    position: absolute;
 }
