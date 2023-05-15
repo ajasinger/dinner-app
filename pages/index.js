@@ -11,6 +11,7 @@ export default function Home() {
         <title>Who's Coming to Dinner</title>
         <meta name="description" content="AI-enabled restaurant finder app" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
