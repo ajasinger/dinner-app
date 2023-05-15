@@ -11,28 +11,35 @@
 
 .ramen {
     position: absolute;
+    transform: rotate(-45deg)
 }
 
 .taco {
     position: absolute;
+    transform: rotate(45deg)
 }
 
 .pizza {
     position: absolute;
+    transform: rotate(45deg)
 }
 
 .sushi {
     position: absolute;
+    transform: rotate(45deg)
 }
 
 .spaghetti {
     position: absolute;
+    transform: rotate(-45deg)
 }
 
-salad {
+.salad {
     position: absolute;
+    transform: rotate(45deg)
 }
 
 .hamburger {
     position: absolute;
+    transform: rotate(-45deg)
 }
