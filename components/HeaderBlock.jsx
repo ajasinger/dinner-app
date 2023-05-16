@@ -1,4 +1,4 @@
-import styles from '@/styles/HeaderBlock.module.css'
+import styles from "@/styles/HeaderBlock.module.css";
 
 const HeaderBlock = () => {
     return (
