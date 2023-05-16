@@ -1,16 +1,15 @@
 .header {
     text-align: center;
-    padding: 3rem;
+    padding: 7rem;
     background-image: radial-gradient(#CDFF64, transparent);
     position: relative;
     width: 100vw;
-    height: 15rem;
-    margin-top: 0;
 }
 
 .subtitle {
     font-size: 1em;
     font-weight: 400;
+    margin: 0 5rem;
 }
 
 .title {
