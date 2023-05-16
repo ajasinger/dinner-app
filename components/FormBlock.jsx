@@ -1,3 +1,4 @@
+import styles from "@/styles/FormBlock.module.css";
 import { useState } from "react";
 
 const FormBlock = () => {
@@ -112,14 +113,14 @@ const FormBlock = () => {
     
     return (
 
-        <div className="form-block">
+        <div className={styles.form}>
 
             {/* add in form destination and get or post*/}
             <form onSubmit={handleSubmit} action="/" method="post">
 
                 {/* addreses */}
-                <fieldset className="form-address">
-                    <legend><span>1.</span>Where is everyone coming from?</legend>
+                <fieldset className={styles.addresses}>
+                    <legend><span className={styles.number}>1.</span>Where is everyone coming from?</legend>
                     <label htmlFor="address1">Neighborhood 1:</label>
                     <input 
                         type="text" 
@@ -129,6 +130,7 @@ const FormBlock = () => {
                         onChange={handleAddressChange} 
                         placeholder="enter the neighborhood" 
                     />
+                    <br />
                     <label htmlFor="address2">Neighborhood 2:</label>
                     <input 
                         type="text" 
@@ -138,6 +140,7 @@ const FormBlock = () => {
                         onChange={handleAddressChange} 
                         placeholder="enter the neighborhood"
                     />
+                    <br />
                     <label htmlFor="address3">Neighborhood 3:</label>
                     <input 
                         type="text" 
@@ -150,8 +153,8 @@ const FormBlock = () => {
                 </fieldset>
 
                 {/* event type */}
-                <fieldset className="form-event-type">
-                    <legend><span>3.</span>Would you like options that are good for any of the below? (select any amount)</legend>
+                <fieldset className={styles.eventType}>
+                    <legend><span className={styles.number}>2.</span>Would you like options that are good for any of the below? (select any amount)</legend>
                     <input 
                         type="checkbox" 
                         id="meeting" 
@@ -188,8 +191,8 @@ const FormBlock = () => {
                 </fieldset>
 
                 {/* food types */}
-                <fieldset className="form-food-type">
-                    <legend><span>4.</span>What type of food would you like to eat? (select any amount)</legend>
+                <fieldset className={styles.foodType}>
+                    <legend><span className={styles.number}>3.</span>What type of food would you like to eat? (select any amount)</legend>
                     <input 
                         type="checkbox" 
                         id="italian" 
@@ -257,8 +260,8 @@ const FormBlock = () => {
                 </fieldset>
 
                 {/* price point */}
-                <fieldset className="form-price">
-                    <legend><span>5.</span>What is your preferred price point? (select any amount)</legend>
+                <fieldset className={styles.price}>
+                    <legend><span className={styles.number}>4.</span>What is your preferred price point? (select any amount)</legend>
                     <input 
                         type="checkbox" 
                         id="inexpensive" 

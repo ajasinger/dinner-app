@@ -1,0 +1,25 @@
+.form {
+    max-width: 85vw;
+}
+
+.addresses {
+    border: none;
+}
+
+.eventType {
+    border: none;
+}
+
+.foodType {
+    border: none;
+}
+
+.price {
+    border: none;
+}
+
+.number {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
