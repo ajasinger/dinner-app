@@ -11,7 +11,7 @@ const HeaderBlock = () => {
             <div className={styles.salad}>&#129367;</div>
             <div className={styles.hamburger}>&#127828;</div>
             <h1 className={styles.title}>Who's Coming to Dinner</h1>
-            <h3>
+            <h3 className={styles.subtitle}>
                 Your AI enabled New York restaurant finder &mdash; find the most convenient 
                 (and tasty) restaurant for you and your crew.
             </h3>

@@ -3,6 +3,14 @@
     padding: 3rem;
     background-image: radial-gradient(#CDFF64, transparent);
     position: relative;
+    width: 100vw;
+    height: 15rem;
+    margin-top: 0;
+}
+
+.subtitle {
+    font-size: 1em;
+    font-weight: 400;
 }
 
 .title {
@@ -11,35 +19,56 @@
 
 .ramen {
     position: absolute;
-    transform: rotate(-45deg)
+    transform: rotate(-30deg);
+    left: 250px;
+    top: 10px;
+    font-size: 1.25em;
 }
 
 .taco {
     position: absolute;
-    transform: rotate(45deg)
+    transform: rotate(55deg);
+    right: 350px;
+    top: 5px;
+    font-size: 1.25em;
 }
 
 .pizza {
     position: absolute;
-    transform: rotate(45deg)
+    transform: rotate(65deg);
+    right: 155px;
+    top: 40px;
+    font-size: 1.25em;
 }
 
 .sushi {
     position: absolute;
-    transform: rotate(45deg)
+    transform: rotate(45deg);
+    left: 250px;
+    top: 10px;
+    font-size: 1.25em;
 }
 
 .spaghetti {
     position: absolute;
-    transform: rotate(-45deg)
+    transform: rotate(-45deg);
+    left: 250px;
+    top: 10px;
+    font-size: 1.25em;
 }
 
 .salad {
     position: absolute;
-    transform: rotate(45deg)
+    transform: rotate(45deg);
+    left: 250px;
+    top: 10px;
+    font-size: 1.25em;
 }
 
 .hamburger {
     position: absolute;
-    transform: rotate(-45deg)
+    transform: rotate(-45deg);
+    left: 250px;
+    top: 10px;
+    font-size: 1.25em;
 }
