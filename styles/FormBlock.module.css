@@ -1,21 +1,50 @@
 .form {
-    max-width: 85vw;
+    max-width: 70vw;
 }
 
 .addresses {
     border: none;
+    padding-bottom: 2rem;
+    line-height: 2rem;
+    font-weight: 300;
+
 }
 
 .eventType {
     border: none;
+    padding-bottom: 2rem;
+    line-height: 2rem;
+    font-weight: 300;
 }
 
 .foodType {
     border: none;
+    padding-bottom: 2rem;
+    line-height: 2rem;
+    font-weight: 300;
 }
 
 .price {
     border: none;
+    padding-bottom: 2rem;
+    line-height: 2rem;
+    font-weight: 300;
+}
+
+.inputTitle {
+    padding-bottom: 1rem;
+}
+
+.textLabel {
+    margin-right: 1rem;
+}
+
+.checkbox {
+    margin-left: 2rem;
+}
+
+.checkboxLabel {
+    margin-left: .5rem;
 }
 
 .number {
