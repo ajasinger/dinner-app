@@ -10,27 +10,15 @@
 
 }
 
-.eventType {
-    border: none;
-    padding-bottom: 2rem;
-    line-height: 2rem;
-    font-weight: 300;
-}
-
-.foodType {
+.foodType,
+.eventType,
+.price {
     border: none;
     padding-bottom: 2rem;
     line-height: 2rem;
     font-weight: 300;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-}
-
-.price {
-    border: none;
-    padding-bottom: 2rem;
-    line-height: 2rem;
-    font-weight: 300;
 }
 
 .inputTitle {

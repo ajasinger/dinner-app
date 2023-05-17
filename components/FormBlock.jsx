@@ -158,56 +158,64 @@ const FormBlock = () => {
                 {/* event type */}
                 <fieldset className={styles.eventType}>
                     <legend className={styles.inputTitle}><span className={styles.number}>2.</span>  What type of event is it? (select any amount)</legend>
-                    <input 
-                        type="checkbox" 
-                        id="meeting" 
-                        name="meeting" 
-                        checked={formEntry.eventType.meeting}
-                        onChange={handleEventTypeChange}
-                        // className={formEntry ? "checked" : ""}
-                    />
-                    <label htmlFor="meeting" className={styles.checkboxLabel}>Meeting</label>
-                    <input 
-                        type="checkbox" 
-                        id="dateNight" 
-                        name="dateNight" 
-                        checked={formEntry.eventType.dateNight}
-                        onChange={handleEventTypeChange}
-                        className={styles.checkbox}
-                    />
-                    <label htmlFor="dateNight" className={styles.checkboxLabel}>Date Night</label>
-                    <input 
-                        type="checkbox" 
-                        id="drinks" 
-                        name="drinks" 
-                        checked={formEntry.eventType.drinks}
-                        onChange={handleEventTypeChange}
-                        className={styles.checkbox}
-                    />
-                    <label htmlFor="drinks" className={styles.checkboxLabel}>Drinks</label>
-                    <input 
-                        type="checkbox" 
-                        id="brunch" 
-                        name="brunch" 
-                        checked={formEntry.eventType.brunch}
-                        onChange={handleEventTypeChange}
-                        className={styles.checkbox}
-                    />
-                    <label htmlFor="brunch" className={styles.checkboxLabel}>Brunch</label>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="meeting" 
+                            name="meeting" 
+                            checked={formEntry.eventType.meeting}
+                            onChange={handleEventTypeChange}
+                            // className={formEntry ? "checked" : ""}
+                        />
+                        <label htmlFor="meeting" className={styles.checkboxLabel}>Meeting</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="dateNight" 
+                            name="dateNight" 
+                            checked={formEntry.eventType.dateNight}
+                            onChange={handleEventTypeChange}
+                            className={styles.checkbox}
+                        />
+                        <label htmlFor="dateNight" className={styles.checkboxLabel}>Date Night</label>
+                    </div> 
+                    <div>   
+                        <input 
+                            type="checkbox" 
+                            id="drinks" 
+                            name="drinks" 
+                            checked={formEntry.eventType.drinks}
+                            onChange={handleEventTypeChange}
+                            className={styles.checkbox}
+                        />
+                        <label htmlFor="drinks" className={styles.checkboxLabel}>Drinks</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="brunch" 
+                            name="brunch" 
+                            checked={formEntry.eventType.brunch}
+                            onChange={handleEventTypeChange}
+                            className={styles.checkbox}
+                        />
+                        <label htmlFor="brunch" className={styles.checkboxLabel}>Brunch</label>
+                    </div>
                 </fieldset>
 
                 {/* food types */}
                 <fieldset className={styles.foodType}>
                     <legend className={styles.inputTitle}><span className={styles.number}>3.</span>  What type of food would you like to eat? (select any amount)</legend>
                     <div>
-                    <input 
-                        type="checkbox" 
-                        id="italian" 
-                        name="italian" 
-                        checked={formEntry.foodType.italian}
-                        onChange={handleFoodTypeChange}
-                    />
-                    <label htmlFor="italian" className={styles.checkboxLabel}>Italian</label>
+                        <input 
+                            type="checkbox" 
+                            id="italian" 
+                            name="italian" 
+                            checked={formEntry.foodType.italian}
+                            onChange={handleFoodTypeChange}
+                        />
+                        <label htmlFor="italian" className={styles.checkboxLabel}>Italian</label>
                     </div>
                     <div>
                         <input 
@@ -291,32 +299,38 @@ const FormBlock = () => {
                 {/* price point */}
                 <fieldset className={styles.price}>
                     <legend className={styles.inputTitle}><span className={styles.number}>4.</span>  What is your preferred price point? (select any amount)</legend>
-                    <input 
-                        type="checkbox" 
-                        id="inexpensive" 
-                        name="inexpensive" 
-                        checked={formEntry.price.inexpensive}
-                        onChange={handlePriceChange}
-                    />
-                    <label htmlFor="inexpensive" className={styles.checkboxLabel}>$$</label>
-                    <input 
-                        type="checkbox" 
-                        id="midPriced" 
-                        name="midPriced" 
-                        checked={formEntry.price.midPriced}
-                        onChange={handlePriceChange}
-                        className={styles.checkbox}
-                    />
-                    <label htmlFor="midPriced" className={styles.checkboxLabel}>$$$</label>
-                    <input 
-                        type="checkbox" 
-                        id="expensive" 
-                        name="expensive" 
-                        checked={formEntry.price.expensive}
-                        onChange={handlePriceChange}
-                        className={styles.checkbox}
-                    />
-                    <label htmlFor="expensive" className={styles.checkboxLabel}>$$$$</label>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="inexpensive" 
+                            name="inexpensive" 
+                            checked={formEntry.price.inexpensive}
+                            onChange={handlePriceChange}
+                        />
+                        <label htmlFor="inexpensive" className={styles.checkboxLabel}>$$</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="midPriced" 
+                            name="midPriced" 
+                            checked={formEntry.price.midPriced}
+                            onChange={handlePriceChange}
+                            className={styles.checkbox}
+                        />
+                        <label htmlFor="midPriced" className={styles.checkboxLabel}>$$$</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="expensive" 
+                            name="expensive" 
+                            checked={formEntry.price.expensive}
+                            onChange={handlePriceChange}
+                            className={styles.checkbox}
+                        />
+                        <label htmlFor="expensive" className={styles.checkboxLabel}>$$$$</label>
+                    </div>
                 </fieldset>
 
                 {/* button */}
