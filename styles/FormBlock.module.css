@@ -1,5 +1,6 @@
 .form {
     max-width: 60vw;
+    padding-bottom: 10rem;
 }
 
 .addresses {
@@ -41,4 +42,8 @@
     font-family: 'Space Mono', monospace;
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+.submitButton {
+    background-color: #CDFF64;
 }

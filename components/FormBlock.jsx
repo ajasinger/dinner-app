@@ -87,7 +87,7 @@ const FormBlock = () => {
 
         //create prompt for API
         const neighborhoodSelections = `${address1}, ${address2}, ${address3}`;
-        console.log(neighborhoodSelecctions)
+        console.log(neighborhoodSelections)
 
         //using reduce()
 
@@ -336,6 +336,7 @@ const FormBlock = () => {
                 {/* button */}
                 <button 
                     type="submit"
+                    className={styles.submitButton}
                 >
                 Find me restaurants
                 </button>
