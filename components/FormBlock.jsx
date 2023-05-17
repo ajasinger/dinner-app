@@ -199,6 +199,7 @@ const FormBlock = () => {
                 {/* food types */}
                 <fieldset className={styles.foodType}>
                     <legend className={styles.inputTitle}><span className={styles.number}>3.</span>  What type of food would you like to eat? (select any amount)</legend>
+                    <div>
                     <input 
                         type="checkbox" 
                         id="italian" 
@@ -207,69 +208,84 @@ const FormBlock = () => {
                         onChange={handleFoodTypeChange}
                     />
                     <label htmlFor="italian" className={styles.checkboxLabel}>Italian</label>
-                    <input 
-                        type="checkbox" 
-                        id="newAmerican" 
-                        name="newAmerican" 
-                        checked={formEntry.foodType.newAmerican}
-                        onChange={handleFoodTypeChange}
-                        className={styles.checkbox}
-                    />
-                    <label htmlFor="newAmerican" className={styles.checkboxLabel}>New American</label>
-                    <input 
-                        type="checkbox" 
-                        id="japanese" 
-                        name="japanese" 
-                        checked={formEntry.foodType.japanese}
-                        onChange={handleFoodTypeChange}
-                        className={styles.checkbox}
-                    />
-                    <label htmlFor="japanese" className={styles.checkboxLabel}>Japanese</label>
-                    <input 
-                        type="checkbox" 
-                        id="mexican" 
-                        name="mexican" 
-                        checked={formEntry.foodType.mexican}
-                        onChange={handleFoodTypeChange}
-                        className={styles.checkbox}
-                    />
-                    <label htmlFor="mexican" className={styles.checkboxLabel}>Mexican</label>
-                    <input 
-                        type="checkbox" 
-                        id="chinese" 
-                        name="chinese" 
-                        checked={formEntry.foodType.chinese}
-                        onChange={handleFoodTypeChange}
-                        className={styles.checkbox}
-                    />
-                    <label htmlFor="chinese" className={styles.checkboxLabel}>Chinese</label>
-                    <input 
-                        type="checkbox" 
-                        id="french" 
-                        name="french" 
-                        checked={formEntry.foodType.french}
-                        onChange={handleFoodTypeChange}
-                        className={styles.checkbox}
-                    />
-                    <label htmlFor="french" className={styles.checkboxLabel}>French</label>
-                    <input 
-                        type="checkbox" 
-                        id="mediterranean" 
-                        name="mediterranean"
-                        checked={formEntry.foodType.mediterranean}
-                        onChange={handleFoodTypeChange}
-                        className={styles.checkbox}
-                    />
-                    <label htmlFor="mediterranean" className={styles.checkboxLabel}>Mediterranean</label>
-                    <input 
-                        type="checkbox" 
-                        id="any" 
-                        name="any" 
-                        checked={formEntry.foodType.any}
-                        onChange={handleFoodTypeChange}
-                        className={styles.checkbox}
-                    />
-                    <label htmlFor="any" className={styles.checkboxLabel}>Any</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="newAmerican" 
+                            name="newAmerican" 
+                            checked={formEntry.foodType.newAmerican}
+                            onChange={handleFoodTypeChange}
+                            className={styles.checkbox}
+                        />
+                        <label htmlFor="newAmerican" className={styles.checkboxLabel}>New American</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="japanese" 
+                            name="japanese" 
+                            checked={formEntry.foodType.japanese}
+                            onChange={handleFoodTypeChange}
+                            className={styles.checkbox}
+                        />
+                        <label htmlFor="japanese" className={styles.checkboxLabel}>Japanese</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="mexican" 
+                            name="mexican" 
+                            checked={formEntry.foodType.mexican}
+                            onChange={handleFoodTypeChange}
+                            className={styles.checkbox}
+                        />
+                        <label htmlFor="mexican" className={styles.checkboxLabel}>Mexican</label>
+                        </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="chinese" 
+                            name="chinese" 
+                            checked={formEntry.foodType.chinese}
+                            onChange={handleFoodTypeChange}
+                            className={styles.checkbox}
+                        />
+                        <label htmlFor="chinese" className={styles.checkboxLabel}>Chinese</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="french" 
+                            name="french" 
+                            checked={formEntry.foodType.french}
+                            onChange={handleFoodTypeChange}
+                            className={styles.checkbox}
+                        />
+                        <label htmlFor="french" className={styles.checkboxLabel}>French</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="mediterranean" 
+                            name="mediterranean"
+                            checked={formEntry.foodType.mediterranean}
+                            onChange={handleFoodTypeChange}
+                            className={styles.checkbox}
+                        />
+                        <label htmlFor="mediterranean" className={styles.checkboxLabel}>Mediterranean</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="any" 
+                            name="any" 
+                            checked={formEntry.foodType.any}
+                            onChange={handleFoodTypeChange}
+                            className={styles.checkbox}
+                        />
+                        <label htmlFor="any" className={styles.checkboxLabel}>Any</label>
+                    </div>
                 </fieldset>
 
                 {/* price point */}
