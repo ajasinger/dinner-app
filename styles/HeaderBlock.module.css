@@ -71,3 +71,121 @@
     top: 9rem;
     font-size: 1.25em;
 }
+
+@media (max-width: 955px) {
+    .ramen {
+        position: absolute;
+        transform: rotate(-30deg);
+        left: 20rem;
+        top: 4.25rem;
+        font-size: 1.25em;
+    }
+    
+    .taco {
+        position: absolute;
+        transform: rotate(55deg);
+        right: 25rem;
+        top: 3.5rem;
+        font-size: 1.25em;
+    }
+    
+    .pizza {
+        position: absolute;
+        transform: rotate(65deg);
+        right: 13rem;
+        top: 7rem;
+        font-size: 1.25em;
+    }
+    
+    .sushi {
+        position: absolute;
+        transform: rotate(30deg);
+        right: 9rem;
+        bottom: 5.5rem;
+        font-size: 1.25em;
+    }
+    
+    .pancakes {
+        position: absolute;
+        transform: rotate(-30deg);
+        right: 24rem;
+        bottom: 4rem;
+        font-size: 1.25em;
+    }
+    
+    .pita {
+        position: absolute;
+        transform: rotate(45deg);
+        left: 13rem;
+        bottom: 4.25rem;
+        font-size: 1.25em;
+    }
+    
+    .hamburger {
+        position: absolute;
+        transform: rotate(-45deg);
+        left: 14rem;
+        top: 9rem;
+        font-size: 1.25em;
+    }
+    
+}
+
+@media (max-width: 770px) {
+    .ramen {
+        position: absolute;
+        transform: rotate(-30deg);
+        left: 20rem;
+        top: 4.25rem;
+        font-size: 1.25em;
+    }
+    
+    .taco {
+        position: absolute;
+        transform: rotate(55deg);
+        right: 25rem;
+        top: 3.5rem;
+        font-size: 1.25em;
+    }
+    
+    .pizza {
+        position: absolute;
+        transform: rotate(65deg);
+        right: 13rem;
+        top: 7rem;
+        font-size: 1.25em;
+    }
+    
+    .sushi {
+        position: absolute;
+        transform: rotate(30deg);
+        right: 9rem;
+        bottom: 5.5rem;
+        font-size: 1.25em;
+    }
+    
+    .pancakes {
+        position: absolute;
+        transform: rotate(-30deg);
+        right: 24rem;
+        bottom: 4rem;
+        font-size: 1.25em;
+    }
+    
+    .pita {
+        position: absolute;
+        transform: rotate(45deg);
+        left: 13rem;
+        bottom: 4.25rem;
+        font-size: 1.25em;
+    }
+    
+    .hamburger {
+        position: absolute;
+        transform: rotate(-45deg);
+        left: 14rem;
+        top: 9rem;
+        font-size: 1.25em;
+    }
+    
+}
