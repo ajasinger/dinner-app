@@ -22,7 +22,8 @@
     padding-bottom: 2rem;
     line-height: 2rem;
     font-weight: 300;
-    display: inline-grid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .price {
@@ -42,10 +43,6 @@
 
 .textBox {
     width: 20rem;
-}
-
-.checkbox {
-    margin-left: 2rem;
 }
 
 .checkboxLabel {
