@@ -157,7 +157,7 @@ const FormBlock = () => {
 
                 {/* event type */}
                 <fieldset className={styles.eventType}>
-                    <legend className={styles.inputTitle}><span className={styles.number}>2.</span>  Would you like options that are good for any of the below? (select any amount)</legend>
+                    <legend className={styles.inputTitle}><span className={styles.number}>2.</span>  What type of event is it? (select any amount)</legend>
                     <input 
                         type="checkbox" 
                         id="meeting" 
