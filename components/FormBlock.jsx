@@ -128,7 +128,8 @@ const FormBlock = () => {
                         name="address1" 
                         value={formEntry.address1} 
                         onChange={handleAddressChange} 
-                        placeholder="enter the neighborhood" 
+                        placeholder="enter a New York neighborhood name" 
+                        className={styles.textBox}
                     />
                     <br />
                     <label htmlFor="address2" className={styles.textLabel}>Neighborhood 2:</label>
@@ -138,7 +139,8 @@ const FormBlock = () => {
                         name="address2" 
                         value={formEntry.address2} 
                         onChange={handleAddressChange} 
-                        placeholder="enter the neighborhood"
+                        placeholder="enter a New York neighborhood name"
+                        className={styles.textBox}
                     />
                     <br />
                     <label htmlFor="address3" className={styles.textLabel}>Neighborhood 3:</label>
@@ -148,7 +150,8 @@ const FormBlock = () => {
                         name="address3" 
                         value={formEntry.address3} 
                         onChange={handleAddressChange}
-                        placeholder="enter the neighborhood"
+                        placeholder="enter a New York neighborhood name"
+                        className={styles.textBox}
                     />
                 </fieldset>
 
