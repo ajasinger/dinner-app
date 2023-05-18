@@ -48,3 +48,9 @@
 .submitButton {
     background-color: #CDFF64;
 }
+
+@media (max-width: 480px) {
+    .textBox {
+        width: 16rem;
+    }
+}
