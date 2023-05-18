@@ -73,10 +73,14 @@
 }
 
 @media (max-width: 955px) {
+    .subtitle {
+        margin: 0;
+    }
+    
     .ramen {
         position: absolute;
         transform: rotate(-30deg);
-        left: 20rem;
+        left: 15rem;
         top: 4.25rem;
         font-size: 1.25em;
     }
@@ -84,7 +88,7 @@
     .taco {
         position: absolute;
         transform: rotate(55deg);
-        right: 25rem;
+        right: 23rem;
         top: 3.5rem;
         font-size: 1.25em;
     }
@@ -92,7 +96,7 @@
     .pizza {
         position: absolute;
         transform: rotate(65deg);
-        right: 13rem;
+        right: 10rem;
         top: 7rem;
         font-size: 1.25em;
     }
@@ -124,7 +128,7 @@
     .hamburger {
         position: absolute;
         transform: rotate(-45deg);
-        left: 14rem;
+        left: 10rem;
         top: 9rem;
         font-size: 1.25em;
     }
@@ -185,6 +189,124 @@
         transform: rotate(-45deg);
         left: 14rem;
         top: 9rem;
+        font-size: 1.25em;
+    }
+    
+}
+
+@media (max-width: 955px) {
+    .ramen {
+        position: absolute;
+        transform: rotate(-30deg);
+        left: 15rem;
+        top: 4.25rem;
+        font-size: 1.25em;
+    }
+    
+    .taco {
+        position: absolute;
+        transform: rotate(55deg);
+        right: 23rem;
+        top: 3.5rem;
+        font-size: 1.25em;
+    }
+    
+    .pizza {
+        position: absolute;
+        transform: rotate(65deg);
+        right: 10rem;
+        top: 7rem;
+        font-size: 1.25em;
+    }
+    
+    .sushi {
+        position: absolute;
+        transform: rotate(30deg);
+        right: 9rem;
+        bottom: 5.5rem;
+        font-size: 1.25em;
+    }
+    
+    .pancakes {
+        position: absolute;
+        transform: rotate(-30deg);
+        right: 24rem;
+        bottom: 4rem;
+        font-size: 1.25em;
+    }
+    
+    .pita {
+        position: absolute;
+        transform: rotate(45deg);
+        left: 13rem;
+        bottom: 4.25rem;
+        font-size: 1.25em;
+    }
+    
+    .hamburger {
+        position: absolute;
+        transform: rotate(-45deg);
+        left: 10rem;
+        top: 9rem;
+        font-size: 1.25em;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .ramen {
+        position: absolute;
+        transform: rotate(-30deg);
+        left: 4rem;
+        top: 11rem;
+        font-size: 1.25em;
+    }
+    
+    .taco {
+        position: absolute;
+        transform: rotate(55deg);
+        right: 10rem;
+        top: 4rem;
+        font-size: 1.25em;
+    }
+    
+    .pizza {
+        position: absolute;
+        transform: rotate(65deg);
+        right: 5rem;
+        top: 9rem;
+        font-size: 1.25em;
+    }
+    
+    .sushi {
+        position: absolute;
+        transform: rotate(30deg);
+        right: 4rem;
+        bottom: 18rem;
+        font-size: 1.25em;
+    }
+    
+    .pancakes {
+        position: absolute;
+        transform: rotate(-30deg);
+        right: 6rem;
+        bottom: 6.5rem;
+        font-size: 1.25em;
+    }
+    
+    .pita {
+        position: absolute;
+        transform: rotate(45deg);
+        left: 7rem;
+        bottom: 5rem;
+        font-size: 1.25em;
+    }
+    
+    .hamburger {
+        position: absolute;
+        transform: rotate(-45deg);
+        left: 4rem;
+        top: 20rem;
         font-size: 1.25em;
     }
     
