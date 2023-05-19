@@ -91,20 +91,60 @@ const FormBlock = () => {
 
         //using reduce()
 
-        //using for loop
+        //using for in loop
+        let eventString = '';
+        for (let eventChoice in formEntry.eventType) {
+            if (formEntry.eventType.dateNight) {
+                eventString =+ `${dateNightString}, `;
+            } else if (formEntry.eventType.eventChoice) {
+                eventString =+ `${formEntry.eventType}, `;
+            } 
+            console.log(eventString);
+        }
+
+        let foodString = '';
+        for (let foodChoice in formEntry.foodType) {
+            if (formEntry.price.newAmerican) {
+                foodString =+ `${newAmericanString}, `;
+            } else if (formEntry.foodType.foodChoice) {
+                foodString =+ `${formEntry.foodType}, `;
+            } 
+            console.log(foodString);
+        }
+
+        let priceString = '';
+        for (let priceChoice in formEntry.price) {
+            if (formEntry.price.midpriced) {
+                priceString =+ `${midPricedString}, `;
+            } else if (formEntry.price.priceChoice) {
+                priceString =+ `${formEntry.price}, `;
+            } 
+            console.log(priceString);
+        }
         
         //if value is true object.keys()
         //get object keys and use reducer function to accumulate onto string (if this is true I want to append aonto teh string) 
         //do a for loop 
         //make variable fo key name to prompt string 
         // for these if the value is true need the property's key 
-        if(formEntry.eventType[e.target.checked]) {
-                let eventSelections = '';
-                eventSelections += `${e.target.name}, `;
-             }
+
+    //wrote this before????
+        // if(formEntry.eventType[e.target.checked]) {
+        //         let eventSelections = '';
+        //         eventSelections += `${e.target.name}, `;
+        //      }
+
+
         //const foodSelections = string of all true food types 
 
         //const priceSelections = string of all true prices 
+
+        //reduce axample 
+        // Transform the profiles into an object keyed by the userId:
+//      const profilesByUserId = profiles.reduce((next, profile) => {
+//          const { userId } = profile;
+//          return { ...next, [userId]: profile };
+//      }, {});
 
         //reset form to initial state
         setFormEntry({initialState});
