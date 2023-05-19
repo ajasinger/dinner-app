@@ -78,11 +78,6 @@ const FormBlock = () => {
     const handleSubmit = event => {
         event.preventDefault();
 
-        //variables to replace multi-word properties
-        const dateNightString = "date night";
-        const newAmericanString = "new american";
-        const midPricedString = "mid-priced";
-
         //make new instance of formEntry to refer back to?
 
         //create prompt for API
@@ -92,8 +87,10 @@ const FormBlock = () => {
         //using reduce()
 
         //using for in loop
-        let eventString = '';
+        
         for (let eventChoice in formEntry.eventType) {
+            let eventString = '';
+            const dateNightString = "date night";
             if (formEntry.eventType.dateNight) {
                 eventString =+ `${dateNightString}, `;
             } else if (formEntry.eventType.eventChoice) {
@@ -102,8 +99,10 @@ const FormBlock = () => {
             console.log(eventString);
         }
 
-        let foodString = '';
+        
         for (let foodChoice in formEntry.foodType) {
+            let foodString = '';
+            const newAmericanString = "new american";
             if (formEntry.price.newAmerican) {
                 foodString =+ `${newAmericanString}, `;
             } else if (formEntry.foodType.foodChoice) {
@@ -112,8 +111,10 @@ const FormBlock = () => {
             console.log(foodString);
         }
 
-        let priceString = '';
+        
         for (let priceChoice in formEntry.price) {
+            let priceString = '';
+            const midPricedString = "mid-priced";
             if (formEntry.price.midpriced) {
                 priceString =+ `${midPricedString}, `;
             } else if (formEntry.price.priceChoice) {
