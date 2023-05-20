@@ -81,45 +81,32 @@ const FormBlock = () => {
         //make new instance of formEntry to refer back to?
 
         //create prompt for API
-        const neighborhoodSelections = `${address1}, ${address2}, ${address3}`;
-        console.log(neighborhoodSelections)
+        
 
         //using reduce()
 
         //using for in loop
-        
-        for (let eventChoice in formEntry.eventType) {
+        for (const selectionCategory in formEntry) {
             let eventString = '';
-            const dateNightString = "date night";
-            if (formEntry.eventType.dateNight) {
-                eventString =+ `${dateNightString}, `;
-            } else if (formEntry.eventType.eventChoice) {
-                eventString =+ `${formEntry.eventType}, `;
-            } 
-            console.log(eventString);
-        }
-
-        
-        for (let foodChoice in formEntry.foodType) {
             let foodString = '';
-            const newAmericanString = "new american";
-            if (formEntry.price.newAmerican) {
-                foodString =+ `${newAmericanString}, `;
-            } else if (formEntry.foodType.foodChoice) {
-                foodString =+ `${formEntry.foodType}, `;
-            } 
-            console.log(foodString);
-        }
-
-        
-        for (let priceChoice in formEntry.price) {
             let priceString = '';
-            const midPricedString = "mid-priced";
-            if (formEntry.price.midpriced) {
-                priceString =+ `${midPricedString}, `;
-            } else if (formEntry.price.priceChoice) {
-                priceString =+ `${formEntry.price}, `;
-            } 
+            let addressString = '';
+            const selectionObject = formEntry[selectionCategory];
+            if(selectionCategory === 'address1' || 'address2' || 'address3') {
+                    addressString += `${selectionObject}, `;
+            }
+            for (const selectionType in selectionObject) {
+                if(selectionCategory === 'eventType' && selectionObject[selectionType]) {
+                    eventString += `${selectionType}, `;
+                } else if(selectionCategory === 'foodType' && selectionObject[selectionType]) {
+                    foodString += `${selectionType}, `;
+                } else if(selectionCategory === 'price' && selectionObject[selectionType]) {
+                    priceString += `${selectionType}, `;
+                }
+            }
+            console.log(addressString);
+            console.log(eventString);
+            console.log(foodString);
             console.log(priceString);
         }
         
@@ -128,17 +115,6 @@ const FormBlock = () => {
         //do a for loop 
         //make variable fo key name to prompt string 
         // for these if the value is true need the property's key 
-
-    //wrote this before????
-        // if(formEntry.eventType[e.target.checked]) {
-        //         let eventSelections = '';
-        //         eventSelections += `${e.target.name}, `;
-        //      }
-
-
-        //const foodSelections = string of all true food types 
-
-        //const priceSelections = string of all true prices 
 
         //reduce axample 
         // Transform the profiles into an object keyed by the userId:
