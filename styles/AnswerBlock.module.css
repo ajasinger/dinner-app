@@ -2,5 +2,30 @@
     background-color: white;
     border: solid black 1.5px;
     border-radius: 20px;
-    padding: 3rem 5rem;
+    padding: 3rem 15rem;
+}
+
+.header {
+    color: #1C44C7;
+    padding-bottom: 2rem;
+}
+
+.buttonSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.lilacButton {
+    background-color: #EDC6F7;
+    /* use flex instead???? */
+    margin-bottom: 1rem;
+}
+
+.violetButton {
+    background-color: #C4C3FF;
+    margin-bottom: 1rem;
+}
+
+.blueButton {
+    background-color: #6181EA;
 }
