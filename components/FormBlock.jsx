@@ -78,28 +78,31 @@ const FormBlock = () => {
     const handleSubmit = event => {
         event.preventDefault();
 
-        //make new instance of formEntry to refer back to?
-
-        //create prompt for API
-        
-
-        //using reduce()
-
-        //using for in loop
+        //define variables for API prompt using for..in loop
         for (const selectionCategory in formEntry) {
             let eventString = '';
             let foodString = '';
             let priceString = '';
             let addressString = '';
+            const dateNightString = "date night";
+            const newAmericanString = "new american";
+            const midPricedString = "mid-priced";
             const selectionObject = formEntry[selectionCategory];
-            if(selectionCategory === 'address1' || 'address2' || 'address3') {
+
+            if (selectionCategory === 'address1' || 'address2' || 'address3') {
                     addressString += `${selectionObject}, `;
             }
             for (const selectionType in selectionObject) {
-                if(selectionCategory === 'eventType' && selectionObject[selectionType]) {
+                if(selectionCategory === 'eventType' && selectionObject[selectionType] && selectionType === 'dateNight') {
+                    eventString += `${dateNightString}, `;
+                } else if(selectionCategory === 'eventType' && selectionObject[selectionType]) {
                     eventString += `${selectionType}, `;
+                } else if(selectionCategory === 'foodType' && selectionObject[selectionType] && selectionType === 'newAmerican') {
+                    foodString += `${newAmericanString}, `;
                 } else if(selectionCategory === 'foodType' && selectionObject[selectionType]) {
                     foodString += `${selectionType}, `;
+                } else if(selectionCategory === 'price' && selectionObject[selectionType] && selectionType === 'midPriced') {
+                    priceString += `${midPricedString}, `;
                 } else if(selectionCategory === 'price' && selectionObject[selectionType]) {
                     priceString += `${selectionType}, `;
                 }
@@ -109,22 +112,9 @@ const FormBlock = () => {
             console.log(foodString);
             console.log(priceString);
         }
-        
-        //if value is true object.keys()
-        //get object keys and use reducer function to accumulate onto string (if this is true I want to append aonto teh string) 
-        //do a for loop 
-        //make variable fo key name to prompt string 
-        // for these if the value is true need the property's key 
-
-        //reduce axample 
-        // Transform the profiles into an object keyed by the userId:
-//      const profilesByUserId = profiles.reduce((next, profile) => {
-//          const { userId } = profile;
-//          return { ...next, [userId]: profile };
-//      }, {});
 
         //reset form to initial state
-        setFormEntry({initialState});
+        // setFormEntry({initialState});
 
     }
     
