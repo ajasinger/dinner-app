@@ -1,3 +1,4 @@
+import styles from "@/styles/AnswerBlock.module.css";
 import { useState } from "react";
 
 const AnswerBlock = ({formResponse}) => {
@@ -6,13 +7,16 @@ const AnswerBlock = ({formResponse}) => {
     const [recsError, setRecsError] = useState(false);
 
     return (
-        <div className="answer-block">
-            <h2>Your restaurants:</h2>
+        <div className={styles.answerBlock}>
+            <h2 className={styles.header}>Your restaurants:</h2>
             { recsLoading && "Please wait..."}
             { recsError && "Something went wrong, please try again..."}
             { recommendations && <p>{recommendations}</p>}
-            <button>Share list</button>
-            <button>Save list</button>
+            <div className={styles.buttonSection}>
+                <button className={styles.lilacButton}>Share list</button>
+                <button className={styles.violetButton}>Return to last search</button>
+                <button className={styles.blueButton}>Start new search</button>
+            </div>
         </div>
     );
 }
