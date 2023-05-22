@@ -2,17 +2,20 @@
     background-color: white;
     border: solid black 1.5px;
     border-radius: 20px;
-    padding: 3rem 15rem;
+    padding: 3rem 5rem;
+    margin: 5rem 15rem;
+    text-align: center;
 }
 
 .header {
-    color: #1C44C7;
+    /* color: #1C44C7; */
     padding-bottom: 2rem;
 }
 
 .buttonSection {
     display: flex;
     flex-direction: column;
+    max-width: 15rem;
 }
 
 .lilacButton {

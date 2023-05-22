@@ -8,7 +8,7 @@ const AnswerBlock = ({formResponse}) => {
 
     return (
         <div className={styles.answerBlock}>
-            <h2 className={styles.header}>Your restaurants:</h2>
+            <h2 className={styles.header}>Your Restaurants:</h2>
             { recsLoading && "Please wait..."}
             { recsError && "Something went wrong, please try again..."}
             { recommendations && <p>{recommendations}</p>}
