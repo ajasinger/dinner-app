@@ -1,5 +1,6 @@
 import styles from "@/styles/FormBlock.module.css";
 import { useState } from "react";
+import Link from 'next/link';
 
 const FormBlock = () => {
 
@@ -113,7 +114,10 @@ const FormBlock = () => {
             console.log(priceString);
         }
 
-        //reset form to initial state
+        //re-route to "/recommendation"
+        // <Link href=""></Link>
+
+        //reset form to initial state????
         // setFormEntry({initialState});
 
     }
