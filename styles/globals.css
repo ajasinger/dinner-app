@@ -22,7 +22,7 @@ button {
   border: solid black 1px;
   box-shadow: -3px 3px black;
   padding: .5rem 2rem; 
-  transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out;
 }
 
 button:hover {
