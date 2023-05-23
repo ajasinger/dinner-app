@@ -1,6 +1,6 @@
-import styles from "@/styles/FormBlock.module.css";
-import { useState } from "react";
-import Link from 'next/link';
+import styles from '@/styles/FormBlock.module.css';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 const FormBlock = () => {
 
@@ -115,7 +115,8 @@ const FormBlock = () => {
         }
 
         //re-route to "/answer"
-        // <Link href=""></Link>
+        const router = useRouter();
+        router.push('/asnwer');
 
         //reset form to initial state????
         // setFormEntry({initialState});
