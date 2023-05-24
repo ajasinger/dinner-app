@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 
 const FormBlock = () => {
+    const router = useRouter();
 
     const initialState = {
         address1: '',
@@ -78,6 +79,7 @@ const FormBlock = () => {
     //event handler for submit
     const handleSubmit = event => {
         event.preventDefault();
+        router.push('/answer');
 
         //define variables for API prompt using for..in loop
         for (const selectionCategory in formEntry) {
@@ -115,8 +117,7 @@ const FormBlock = () => {
         }
 
         //re-route to "/answer"
-        const router = useRouter();
-        router.push('/asnwer');
+   
 
         //reset form to initial state????
         // setFormEntry({initialState});
