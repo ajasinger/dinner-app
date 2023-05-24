@@ -19,7 +19,6 @@ export default function Home() {
       <main className={styles.main}>
         < HeaderBlock />
         < FormBlock />
-        < AnswerBlock />
       </main>
     </div>
   )
