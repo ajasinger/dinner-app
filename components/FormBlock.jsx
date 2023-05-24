@@ -116,9 +116,6 @@ const FormBlock = () => {
             console.log(priceString);
         }
 
-        //re-route to "/answer"
-   
-
         //reset form to initial state????
         // setFormEntry({initialState});
 
