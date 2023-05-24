@@ -9,8 +9,8 @@ const AnswerBlock = ({formResponse}) => {
     return (
         <div className={styles.answerBlock}>
             <h2 className={styles.header}>Your Restaurants:</h2>
-            { recsLoading && "Restaraunt recommendations calculating..."}
-            { recsError && "Something went wrong, please try again."}
+            { recsLoading && <p>Restaurant recommendations calculating...</p> }
+            { recsError && <p>Something went wrong, please try again.</p> }
             { recommendations && <p>{recommendations}</p>}
             <div className={styles.buttonSection}>
                 <button className={styles.lilacButton}>Share list</button>
