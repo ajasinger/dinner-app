@@ -1,7 +1,13 @@
-const Page = () => {
-    return (
-        <h1>Profile Page</h1>
-    )
-}
+import HeaderBlock from '../components/HeaderBlock';
+import ProfileBlock from '../components/LoginBlock';
 
-export default Page;
+const Profile = () => {
+    return (
+        <div>
+            < HeaderBlock />
+            < ProfileBlock /> 
+        </div>
+    )
+  }
+
+  export default Profile;
