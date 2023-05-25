@@ -1,13 +1,13 @@
 import HeaderBlock from '../components/HeaderBlock';
-import AnswerBlock from '../components/AnswerBlock';
+import LoginBlock from '../components/LoginBlock';
 
-const Answer = () => {
+const Login = () => {
     return (
         <div>
             < HeaderBlock />
-            < AnswerBlock /> 
+            < LoginBlock /> 
         </div>
     )
   }
 
-  export default Answer;
+  export default Login;

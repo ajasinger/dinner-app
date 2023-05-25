@@ -126,7 +126,7 @@ const FormBlock = () => {
         <div className={styles.form}>
 
             {/* add in form destination and get or post*/}
-            <form onSubmit={handleSubmit} action="/" method="post">
+            <form onSubmit={handleSubmit} action="pages/api/recommendations.js" method="post">
 
                 {/* addreses */}
                 <fieldset className={styles.addresses}>
