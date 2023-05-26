@@ -6,6 +6,13 @@ const AnswerBlock = ({formResponse}) => {
     const [recsLoading, setRecsLoading] = useState(false);
     const [recsError, setRecsError] = useState(false);
 
+//setting GET request     
+    // const fetchRecommendations = async() => {
+    //     const response = await fetch('/api/recommendations')
+    //     const data = await response.json()
+    //     setRecommendations(data)
+    // }
+
     return (
         <div className={styles.answerBlock}>
             <h2 className={styles.header}>Your Restaurants:</h2>
