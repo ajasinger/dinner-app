@@ -1,4 +1,4 @@
-import styles from "@/styles/AnswerBlock.module.css";
+import styles from "./AnswerBlock.module.css";
 import { useState } from "react";
 
 const AnswerBlock = ({formResponse}) => {

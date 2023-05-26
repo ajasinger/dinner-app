@@ -1,4 +1,4 @@
-import styles from '@/styles/FormBlock.module.css';
+import styles from './FormBlock.module.css';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -114,6 +114,14 @@ const FormBlock = () => {
             console.log(eventString);
             console.log(foodString);
             console.log(priceString);
+
+            const chatGPTPrompt = `what New York neighborhood is the center of these: ${addressString}?
+               Tell me the 5 best restaurants in hat neightborhoodt that would be a chosen by a food editor at the New York Times or Eater.
+               The restaurant should be good for this type of event: ${eventString}
+               The restaurant should serve this type of food: ${foodString}
+               The restaurant should have a price point that is: ${priceString}
+               Format the response as a numbered list containing: a) Restaurant name b) Restaurant address c) Restaurant neighborhood  d) Restaurant website e) if you can make reservations on Opentable or Resy`
+            console.log(chatGPTPrompt)
         }
 
         //reset form to initial state????
