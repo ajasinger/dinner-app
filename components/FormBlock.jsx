@@ -77,7 +77,7 @@ const FormBlock = () => {
     }
 
     //event handler for submit
-    const handleSubmit = event => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         router.push('/answer');
 
@@ -110,18 +110,23 @@ const FormBlock = () => {
                     priceString += `${selectionType}, `;
                 }
             }
-            console.log(addressString);
-            console.log(eventString);
-            console.log(foodString);
-            console.log(priceString);
-
-            const chatGPTPrompt = `what New York neighborhood is the center of these: ${addressString}?
-               Tell me the 5 best restaurants in hat neightborhoodt that would be a chosen by a food editor at the New York Times or Eater.
-               The restaurant should be good for this type of event: ${eventString}
-               The restaurant should serve this type of food: ${foodString}
-               The restaurant should have a price point that is: ${priceString}
-               Format the response as a numbered list containing: a) Restaurant name b) Restaurant address c) Restaurant neighborhood  d) Restaurant website e) if you can make reservations on Opentable or Resy`
-            console.log(chatGPTPrompt)
+            
+            const response = await fetch('/api/recommendations', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    addressString,
+                    eventString,
+                    foodString,
+                    priceString
+                })
+            })
+            
+            const result = await response.json();
+            console.log(result);
+            // console.log(`${result.addressString} & ${result.eventString} & ${result.foodString} & ${result.priceString}`)
         }
 
         //reset form to initial state????
@@ -133,7 +138,7 @@ const FormBlock = () => {
 
         <div className={styles.form}>
 
-            <form onSubmit={handleSubmit} action="../pages/api/recommendations.js" method="post">
+            <form onSubmit={handleSubmit}>
 
                 {/* addreses */}
                 <fieldset className={styles.addresses}>
@@ -147,6 +152,7 @@ const FormBlock = () => {
                         onChange={handleAddressChange} 
                         placeholder="enter a New York neighborhood name" 
                         className={styles.textBox}
+                        required
                     />
                     <br />
                     <label htmlFor="address2" className={styles.textLabel}>Neighborhood 2:</label>
