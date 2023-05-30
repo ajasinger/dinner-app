@@ -33,6 +33,7 @@ const FormBlock = () => {
     }
 
     const [formEntry, setFormEntry] = useState(initialState);
+    const [restaurantRecs, setRestaurantRecs] = useState('');
 
     //event handlers for form entry
     const handleAddressChange = e => {
@@ -124,8 +125,10 @@ const FormBlock = () => {
                 })
             })
             
+            //receive response from POST request and convert to json 
             const result = await response.json();
-            console.log(result);
+            setRestaurantRecs(result.restaurantRecs.trim());
+            console.log(restaurantRecs);
         }
 
         //reset form to initial state????
