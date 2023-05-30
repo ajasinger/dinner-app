@@ -126,7 +126,6 @@ const FormBlock = () => {
             
             const result = await response.json();
             console.log(result);
-            // console.log(`${result.addressString} & ${result.eventString} & ${result.foodString} & ${result.priceString}`)
         }
 
         //reset form to initial state????
