@@ -1,14 +1,14 @@
-import styles from './FormBlock.module.css';
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+import styles from "./FormBlock.module.css";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 const FormBlock = () => {
     const router = useRouter();
 
     const initialState = {
-        address1: '',
-        address2: '',
-        address3: '',
+        address1: "",
+        address2: "",
+        address3: "",
         eventType: {
             meeting: false,
             dateNight: false, 
@@ -33,7 +33,7 @@ const FormBlock = () => {
     }
 
     const [formEntry, setFormEntry] = useState(initialState);
-    const [restaurantRecs, setRestaurantRecs] = useState('');
+    const [restaurantRecs, setRestaurantRecs] = useState("");
 
     //event handlers for form entry
     const handleAddressChange = e => {
@@ -80,42 +80,42 @@ const FormBlock = () => {
     //event handler for submit
     const handleSubmit = async (event) => {
         event.preventDefault();
-        router.push('/answer');
+        router.push("/answer");
 
         //define variables for API prompt using for..in loop
         for (const selectionCategory in formEntry) {
-            let eventString = '';
-            let foodString = '';
-            let priceString = '';
-            let addressString = '';
+            let eventString = "";
+            let foodString = "";
+            let priceString = "";
+            let addressString = "";
             const dateNightString = "date night";
             const newAmericanString = "new american";
             const midPricedString = "mid-priced";
             const selectionObject = formEntry[selectionCategory];
 
-            if (selectionCategory === 'address1' || 'address2' || 'address3') {
+            if (selectionCategory === "address1" || "address2" || "address3") {
                     addressString += `${selectionObject}, `;
             }
             for (const selectionType in selectionObject) {
-                if(selectionCategory === 'eventType' && selectionObject[selectionType] && selectionType === 'dateNight') {
+                if(selectionCategory === "eventType" && selectionObject[selectionType] && selectionType === 'dateNight') {
                     eventString += `${dateNightString}, `;
-                } else if(selectionCategory === 'eventType' && selectionObject[selectionType]) {
+                } else if(selectionCategory === "eventType" && selectionObject[selectionType]) {
                     eventString += `${selectionType}, `;
-                } else if(selectionCategory === 'foodType' && selectionObject[selectionType] && selectionType === 'newAmerican') {
+                } else if(selectionCategory === "foodType" && selectionObject[selectionType] && selectionType === 'newAmerican') {
                     foodString += `${newAmericanString}, `;
-                } else if(selectionCategory === 'foodType' && selectionObject[selectionType]) {
+                } else if(selectionCategory === "foodType" && selectionObject[selectionType]) {
                     foodString += `${selectionType}, `;
-                } else if(selectionCategory === 'price' && selectionObject[selectionType] && selectionType === 'midPriced') {
+                } else if(selectionCategory === "price" && selectionObject[selectionType] && selectionType === 'midPriced') {
                     priceString += `${midPricedString}, `;
-                } else if(selectionCategory === 'price' && selectionObject[selectionType]) {
+                } else if(selectionCategory === "price" && selectionObject[selectionType]) {
                     priceString += `${selectionType}, `;
                 }
             }
             
-            const response = await fetch('/api/recommendations', {
-                method: 'POST',
+            const response = await fetch("/api/recommendations", {
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
                     addressString,

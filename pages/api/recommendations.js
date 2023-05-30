@@ -5,7 +5,7 @@ const generateRecs = async ({
   priceString
 }) => {
   try {
-    const response = await fetch(
+    const openAIResponse = await fetch(
       "https://api.openai.com/v1/engines/text-davinci-003/completions",
       {
         method: "POST",
@@ -26,7 +26,7 @@ const generateRecs = async ({
         }),
       }
     );
-    const data = await response.json();
+    const data = await openAIResponse.json();
 
     return data.choices[0].text;
   } catch (err) {
