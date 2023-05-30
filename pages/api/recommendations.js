@@ -26,15 +26,15 @@ const generateRecs = async ({
         }),
       }
     );
-    const recs = await response.json();
+    const data = await response.json();
 
-    return recs.choices[0].text;
+    return data.choices[0].text;
   } catch (err) {
     console.error(err);
   }
 };
 
-export default async function handler(req, res) {
+const handler = async(req, res) => {
   const { addressString, eventString, foodString, priceString } = req.body;
 
   const restaurantRecs = await generateRecs({
@@ -49,7 +49,7 @@ export default async function handler(req, res) {
   });
 }
 
-
+export default handler;
 
 //THIS WORKS
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
