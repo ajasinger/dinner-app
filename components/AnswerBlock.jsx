@@ -1,17 +1,9 @@
 import styles from "./AnswerBlock.module.css";
 import { useState } from "react";
 
-const AnswerBlock = ({formResponse}) => {
-    const [recommendations, setRecommendations] = useState("");
+const AnswerBlock = ({restaurantRecs}) => {
     const [recsLoading, setRecsLoading] = useState(false);
     const [recsError, setRecsError] = useState(false);
-
-//setting GET request     
-    // const fetchRecommendations = async() => {
-    //     const response = await fetch('/api/recommendations')
-    //     const data = await response.json()
-    //     setRecommendations(data)
-    // }
 
     return (
         <div className={styles.answerBlock}>
@@ -19,7 +11,7 @@ const AnswerBlock = ({formResponse}) => {
             {/* animate this?? */}
             { recsLoading && <p>Restaurant recommendations calculating...</p> }
             { recsError && <p>Something went wrong, please try again.</p> }
-            { recommendations && <p>{recommendations}</p>}
+            { restaurantRecs && <p>{restaurantRecs}</p>}
             <div className={styles.buttonSection}>
                 <button className={styles.lilacButton}>Share list</button>
                 <button className={styles.violetButton}>Return to last search</button>
