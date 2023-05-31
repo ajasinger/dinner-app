@@ -3,7 +3,7 @@ import styles from "./TitleBlock.module.css";
 const TitleBlock = () => {
     return (
         <div className={styles.header}>
-            <h3 className={styles.login}>Login</h3>
+            {/* <h3 className={styles.login}>Login</h3> */}
             <div className={styles.headerText}>
                 <div className={styles.ramen}>&#127836;</div>
                 <div className={styles.taco}>&#127790;</div>
