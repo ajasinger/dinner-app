@@ -365,6 +365,7 @@ const FormBlock = () => {
                 <button 
                     type="submit"
                     className={styles.submitButton}
+                    disabled={recsLoading}
                 >
                 Find me restaurants
                 </button>
