@@ -51,7 +51,9 @@ const handler = async(req, res) => {
 
 export default handler;
 
-//THIS WORKS
+
+
+//THIS ALSO WORKS
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 // import { Configuration, OpenAIApi } from 'openai';
@@ -72,57 +74,6 @@ export default handler;
 
 //   const recommendations = completion.data.choices[0].text;
 //   res.status(200).json({ recommendations })
-// }
-
-// export default handler;
-//THIS WORKS
-
-
-// function to call openAI API
-//   const completion = async ({ addressString }) => {
-//     try { 
-//       const openAIResponse = await openai.createCompletion({
-//         model: 'text-davinci-003',
-//         prompt: `what is the best restaurant in this New York neighborhood ${addressString}?`,
-//         // prompt: `what New York neighborhood is the center of these: ${addressString}?
-//         // Give me a list of the 5 best restaurants in that neighborhood that would be a chosen by a food editor at the New York Times or Eater.
-//         // The restaurant should be good for this type of event: ${eventString || 'any'}
-//         // The restaurant should serve this type of food: ${foodString || 'any'}
-//         // The restaurant should have a price point that is: ${priceString || 'any'}
-//         // Format the response as a numbered list containing: a) Restaurant name b) Restaurant address c) Restaurant neighborhood  d) Restaurant website e) if you can make reservations on Opentable or Resy
-//         // `,
-//         // prompt: [`what New York neighborhood is the center of these: ${addressString}?`,
-//         // `Give me a list of the 5 best restaurants in that neighborhood that would be a chosen by a food editor at the New York Times or Eater.
-//         // The restaurant should be good for this type of event: ${eventString || 'any'}
-//         // The restaurant should serve this type of food: ${foodString || 'any'}
-//         // The restaurant should have a price point that is: ${priceString || 'any'}
-//         // Format the response as a numbered list containing: a) Restaurant name b) Restaurant address c) Restaurant neighborhood  d) Restaurant website e) if you can make reservations on Opentable or Resy
-//         // `],
-//         //https://platform.openai.com/tokenizer
-//         max_tokens: 500,
-//         temperature: 0,
-//       });
-//       console.log(openAIResponse);
-
-//       const recommendations = await openAIResponse.json()
-//       console.log(recommendations);
-//       return recommendations.data.choices[0].text;
-
-//     } catch(err) {
-//       console.error(err);
-//     }
-//   };
-
-//   console.log(completion);
-
-
-//   const handler = async (req, res) => {
-//     const { addressString } = req.body;
-    
-//     const restaurantRecs = await completion({
-//       addressString, 
-//     });
-//     res.status(200).json({data: `${restaurantRecs}`});
 // }
 
 // export default handler;
