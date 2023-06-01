@@ -34,6 +34,9 @@ const FormBlock = () => {
 
     const [formEntry, setFormEntry] = useState(initialState);
     const [restaurantRecs, setRestaurantRecs] = useState("");
+    //also in AnswerBlock
+    const [recsLoading, setRecsLoading] = useState(false);
+    const [recsLoadingError, setRecsLoadingError] = useState(false);
 
     //event handlers for form entry
     const handleAddressChange = e => {
@@ -367,6 +370,11 @@ const FormBlock = () => {
                 </button>
 
             </form>
+
+            {/* also in AnswerBlock */}
+            { recsLoading && "your recommendations will be here soon..." }
+            { recsLoadingError && "something went wrong,please try again."}
+            { restaurantRecs && {restaurantRecs} }
 
         </div>
     );
