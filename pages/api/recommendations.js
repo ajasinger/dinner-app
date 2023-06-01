@@ -46,6 +46,8 @@ const handler = async(req, res) => {
     priceString
   });
 
+  console.log(restaurantRecs);
+
   res.status(200).json({
     restaurantRecs
   });
