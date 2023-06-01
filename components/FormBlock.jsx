@@ -83,7 +83,7 @@ const FormBlock = () => {
     //event handler for submit
     const handleSubmit = async (event) => {
         event.preventDefault();
-        router.push("/answer");
+        // router.push("/answer");
 
         //define variables for API prompt using for..in loop
         for (const selectionCategory in formEntry) {
@@ -127,6 +127,24 @@ const FormBlock = () => {
                     priceString
                 })
             })
+
+            // if(response) {
+            //     try {
+            //         setRestaurantRecs("");
+            //         setRecsLoadingError(false);
+            //         setRecsLoading(true);
+
+            //         const result = await response.json();
+            //         setRestaurantRecs(result.restaurantRecs.trim());
+            //         console.log(restaurantRecs);
+
+            //     } catch(error) {
+            //         console.log(error);
+            //         setRecsLoadingError(true);
+            //     } finally {
+            //         setRecsLoading(false);
+            //     }
+            // }
             
             //receive response from POST request and convert to json 
             const result = await response.json();
