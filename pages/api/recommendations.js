@@ -26,7 +26,9 @@ const generateRecs = async ({
         }),
       }
     );
+    
     const data = await openAIResponse.json();
+    console.log(data);
 
     return data.choices[0].text;
   } catch (err) {
