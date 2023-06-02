@@ -87,11 +87,12 @@ const FormBlock = () => {
         setRecsLoading(true);
 
         //define variables for API prompt using for..in loop
+        let eventString = "";
+        let foodString = "";
+        let priceString = "";
+        let addressString = "";
+
         for (const selectionCategory in formEntry) {
-            let eventString = "";
-            let foodString = "";
-            let priceString = "";
-            let addressString = "";
             const dateNightString = "date night";
             const newAmericanString = "new american";
             const midPricedString = "mid-priced";
@@ -115,48 +116,52 @@ const FormBlock = () => {
                     priceString += `${selectionType}, `;
                 }
             }
-            
-            const response = await fetch("/api/recommendations", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    addressString,
-                    eventString,
-                    foodString,
-                    priceString
-                })
+        };
+
+        console.log(addressString);
+
+        const response = await fetch("/api/recommendations", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                addressString,
+                eventString,
+                foodString,
+                priceString
             })
+        });
 
-            // if(response) {
-            //     try {
-            //         setRestaurantRecs("");
-            //         setRecsLoadingError(false);
-            //         setRecsLoading(true);
+        console.log(response);
 
-            //         const result = await response.json();
-            //         setRestaurantRecs(result.restaurantRecs.trim());
-            //         console.log(restaurantRecs);
+        // if(response) {
+        //     try {
+        //         setRestaurantRecs("");
+        //         setRecsLoadingError(false);
 
-            //     } catch(error) {
-            //         console.log(error);
-            //         setRecsLoadingError(true);
-            //     } finally {
-            //         setRecsLoading(false);
-            //     }
-            // }
-            
-            //receive response from POST request and convert to json 
-            const result = await response.json();
-            setRestaurantRecs(result.restaurantRecs.trim());
-            console.log(restaurantRecs);
-        }
+        //         const body = await response.json();
+        //         setRestaurantRecs(body.restaurantRecs);
+        //         console.log(restaurantRecs);
+
+        //     } catch(error) {
+        //         console.log(error);
+        //         setRecsLoadingError(true);
+        //     } 
+
+        // }
+        
+        //receive response from POST request and convert to json 
+        setRecsLoading(false);
+        const data = await response.json();
+        console.log(data);
+        setRestaurantRecs(data.restaurantRecs);
+        console.log(restaurantRecs);
 
         //reset form to initial state????
         // setFormEntry({initialState});
 
-    }
+    };
     
     return (
 
@@ -394,7 +399,7 @@ const FormBlock = () => {
             {/* also in AnswerBlock */}
             { recsLoading && "your recommendations will be here soon..." }
             { recsLoadingError && "something went wrong,please try again."}
-            { restaurantRecs && {restaurantRecs} }
+            { restaurantRecs && <p>{ restaurantRecs }</p> }
 
         </div>
     );
