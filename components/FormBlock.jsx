@@ -84,6 +84,7 @@ const FormBlock = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         // router.push("/answer");
+        setRecsLoading(true);
 
         //define variables for API prompt using for..in loop
         for (const selectionCategory in formEntry) {
