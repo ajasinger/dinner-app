@@ -31,6 +31,7 @@ const generateRecs = async ({
     console.log(data);
 
     return data.choices[0].text;
+    
   } catch (err) {
     console.error(err);
   }
