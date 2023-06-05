@@ -4,7 +4,7 @@ const Map = () => {
     const coordinates = { lat:0, lng:0 }
 
     return(
-        <div className={styles.mapContainer}>
+        <div>
             <GoogleMapReact
                 defaultCenter={coordinates}
                 center={coordinates}
