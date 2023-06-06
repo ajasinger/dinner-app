@@ -47,8 +47,8 @@
 .pizza {
     position: absolute;
     transform: rotate(65deg);
-    right: 24rem;
-    top: 7rem;
+    right: 24%;
+    top: 7%;
     font-size: 1.25em;
 }
 
@@ -84,7 +84,7 @@
     font-size: 1.25em;
 }
 
-@media (max-width: 1220px) {  
+/* @media (max-width: 1220px) {  
     .ramen {
         position: absolute;
         transform: rotate(-30deg);
@@ -101,14 +101,14 @@
         font-size: 1.25em;
     }
     
-    .pizza {
+    /* .pizza {
         position: absolute;
         transform: rotate(65deg);
         right: 18rem;
         top: 7rem;
         font-size: 1.25em;
-    }
-    
+    } */
+/*     
     .sushi {
         position: absolute;
         transform: rotate(30deg);
@@ -204,4 +204,4 @@
         font-size: 1.25em;
     }
     
-}
+} */ 
