@@ -31,16 +31,16 @@
 .ramen {
     position: absolute;
     transform: rotate(-30deg);
-    left: 30rem;
-    top: 4.25rem;
+    left: 30%;
+    top: 4.25%;
     font-size: 1.25em;
 }
 
 .taco {
     position: absolute;
     transform: rotate(55deg);
-    right: 38rem;
-    top: 3.5rem;
+    right: 38%;
+    top: 3.5%;
     font-size: 1.25em;
 }
 
@@ -55,32 +55,32 @@
 .sushi {
     position: absolute;
     transform: rotate(30deg);
-    right: 16rem;
-    bottom: 5.5rem;
+    right: 16%;
+    bottom: 5.5%;
     font-size: 1.25em;
 }
 
 .pancakes {
     position: absolute;
     transform: rotate(-30deg);
-    right: 40rem;
-    bottom: 3rem;
+    right: 40%;
+    bottom: 3%;
     font-size: 1.25em;
 }
 
 .pita {
     position: absolute;
     transform: rotate(45deg);
-    left: 26rem;
-    bottom: 4.25rem;
+    left: 26%;
+    bottom: 4.25%;
     font-size: 1.25em;
 }
 
 .hamburger {
     position: absolute;
     transform: rotate(-45deg);
-    left: 20rem;
-    top: 8rem;
+    left: 20%;
+    top: 8%;
     font-size: 1.25em;
 }
 
