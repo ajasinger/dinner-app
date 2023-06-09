@@ -1,10 +1,9 @@
-.header {
-    text-align: right;
+/* .header {
     margin-top: .5rem;
     margin-right: 1rem;
-}
+} */
 
-.headerText {
+.headerContent {
     text-align: center;
     padding: 7rem;
     background-image: radial-gradient(#CDFF64, transparent 75%);
@@ -12,11 +11,11 @@
     width: 100vw;
 }
 
-.login {
+/* .login {
     font-size: 1em;
     font-weight: 400;
     margin: 0;
-}
+} */
 
 .title {
     padding-bottom: 2rem;
