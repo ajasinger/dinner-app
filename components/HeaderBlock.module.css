@@ -31,57 +31,57 @@
 .ramen {
     position: absolute;
     transform: rotate(-30deg);
-    left: 30%;
-    top: 4.25%;
-    font-size: 1.25em;
+    left: 35%;
+    top: 10%;
+    font-size: 1.75em;
 }
 
 .taco {
     position: absolute;
     transform: rotate(55deg);
-    right: 38%;
-    top: 3.5%;
-    font-size: 1.25em;
+    right: 45%;
+    top: 10%;
+    font-size: 1.75em;
 }
 
 .pizza {
     position: absolute;
     transform: rotate(65deg);
-    right: 24%;
-    top: 7%;
-    font-size: 1.25em;
+    right: 28%;
+    top: 25%;
+    font-size: 1.75em;
 }
 
 .sushi {
     position: absolute;
     transform: rotate(30deg);
-    right: 16%;
-    bottom: 5.5%;
-    font-size: 1.25em;
+    right: 25%;
+    bottom: 10%;
+    font-size: 1.75em;
 }
 
 .pancakes {
     position: absolute;
     transform: rotate(-30deg);
-    right: 40%;
-    bottom: 3%;
-    font-size: 1.25em;
+    right: 50%;
+    bottom: 10%;
+    font-size: 1.75em;
 }
 
 .pita {
     position: absolute;
     transform: rotate(45deg);
-    left: 26%;
-    bottom: 4.25%;
-    font-size: 1.25em;
+    left: 30%;
+    bottom: 15%;
+    font-size: 1.75em;
 }
 
 .hamburger {
     position: absolute;
     transform: rotate(-45deg);
-    left: 20%;
-    top: 8%;
-    font-size: 1.25em;
+    left: 25%;
+    top: 30%;
+    font-size: 1.75em;
 }
 
 /* @media (max-width: 1220px) {  
