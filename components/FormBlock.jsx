@@ -397,9 +397,11 @@ const FormBlock = () => {
             </form>
 
             {/* also in AnswerBlock */}
-            { recsLoading && "your recommendations will be here soon..." }
-            { recsLoadingError && "something went wrong,please try again."}
-            { restaurantRecs && <p>{ restaurantRecs }</p> }
+            <div className={styles.answerSection}>
+                { recsLoading && "your recommendations will be here soon..." }
+                { recsLoadingError && "something went wrong,please try again."}
+                { restaurantRecs && <p>{ restaurantRecs }</p> }
+            </div>
 
         </div>
     );

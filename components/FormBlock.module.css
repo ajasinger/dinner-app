@@ -49,6 +49,10 @@
     background-color: #CDFF64;
 }
 
+.answerSection {
+    padding-top: 5rem;
+}
+
 @media (max-width: 480px) {
     .textBox {
         width: 16rem;
