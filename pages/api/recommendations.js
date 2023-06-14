@@ -19,7 +19,7 @@ const generateRecs = async ({
           The restaurant should be good for this type of event: ${eventString || 'any'}
           The restaurant should serve this type of food: ${foodString || 'any'}
           The restaurant should have a price point that is: ${priceString || 'any'}
-          Format the response as a numbered list containing: a) Restaurant name b) Restaurant address c) Restaurant neighborhood  
+          Format the response as a numbered list with each number on a new line containing: a) Restaurant name b) Restaurant address c) Restaurant neighborhood  
           d) Restaurant website e) if you can make reservations on Opentable or Resy`,
           max_tokens: 500,
           temperature: 0.5,
