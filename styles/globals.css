@@ -16,6 +16,10 @@ h3 {
   font-family: 'Space Mono', monospace;
 }
 
+p {
+  font-weight: 300;
+}
+
 button {
   font-family: 'Space Mono', monospace;
   border-radius: 10px;
