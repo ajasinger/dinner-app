@@ -158,6 +158,7 @@ const FormBlock = () => {
         setRestaurantRecs(data.restaurantRecs);
         console.log(restaurantRecs);
 
+        // re-set form?
         // setFormEntry({initialState});
 
     };
