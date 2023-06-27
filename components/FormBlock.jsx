@@ -217,7 +217,7 @@ const FormBlock = () => {
                             name="meeting" 
                             checked={formEntry.eventType.meeting}
                             onChange={handleEventTypeChange}
-                            // className={formEntry ? "checked" : ""}
+                            className={styles.checkbox}
                         />
                         <label htmlFor="meeting" className={styles.checkboxLabel}>Meeting</label>
                     </div>
