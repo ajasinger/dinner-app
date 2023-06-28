@@ -34,7 +34,6 @@ const FormBlock = () => {
 
     const [formEntry, setFormEntry] = useState(initialState);
     const [restaurantRecs, setRestaurantRecs] = useState("");
-    //also in AnswerBlock
     const [recsLoading, setRecsLoading] = useState(false);
     const [recsLoadingError, setRecsLoadingError] = useState(false);
 
@@ -83,7 +82,7 @@ const FormBlock = () => {
     //event handler for submit
     const handleSubmit = async (event) => {
         event.preventDefault();
-        // re-route to answer page on submit
+        // re-route to answer page on submit?
         // router.push("/answer");
         setRecsLoading(true);
 
@@ -137,8 +136,8 @@ const FormBlock = () => {
             console.log(response);
 
             if(response.ok) {
-                //receive response from POST request and convert to json 
                 setRecsLoading(false);
+                //receive response from POST request and convert to json 
                 const data = await response.json();
                 console.log(data);
                 setRestaurantRecs(data.restaurantRecs);
@@ -387,7 +386,6 @@ const FormBlock = () => {
 
             </form>
 
-            {/* also in AnswerBlock */}
             <div className={styles.answerSection}>
                 { recsLoading && "your recommendations will be here soon..." }
                 { recsLoadingError && "something went wrong,please try again."}
