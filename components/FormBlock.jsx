@@ -387,8 +387,10 @@ const FormBlock = () => {
             </form>
 
             <div className={styles.answerSection}>
-                { recsLoading && "your recommendations will be here soon..." }
-                { recsLoadingError && "something went wrong,please try again."}
+                <div className={styles.LoadingSection}>
+                    { recsLoading && <p className={styles.loading}>your recommendations will be here soon</p> }
+                    { recsLoadingError && <p>something went wrong,please try again.</p>}
+                </div>
                 { restaurantRecs && <p>{ restaurantRecs }</p> }
             </div>
 
