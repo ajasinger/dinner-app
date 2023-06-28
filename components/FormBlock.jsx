@@ -121,43 +121,33 @@ const FormBlock = () => {
 
         console.log(addressString);
 
-        const response = await fetch("/api/recommendations", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                addressString,
-                eventString,
-                foodString,
-                priceString
-            })
-        });
+        try {
+            const response = await fetch("/api/recommendations", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    addressString,
+                    eventString,
+                    foodString,
+                    priceString
+                })
+            });
+            console.log(response);
 
-        console.log(response);
-
-        // if(response) {
-        //     try {
-        //         setRestaurantRecs("");
-        //         setRecsLoadingError(false);
-
-        //         const body = await response.json();
-        //         setRestaurantRecs(body.restaurantRecs);
-        //         console.log(restaurantRecs);
-
-        //     } catch(error) {
-        //         console.log(error);
-        //         setRecsLoadingError(true);
-        //     } 
-
-        // }
-        
-        //receive response from POST request and convert to json 
-        setRecsLoading(false);
-        const data = await response.json();
-        console.log(data);
-        setRestaurantRecs(data.restaurantRecs);
-        console.log(restaurantRecs);
+            if(response.ok) {
+                //receive response from POST request and convert to json 
+                setRecsLoading(false);
+                const data = await response.json();
+                console.log(data);
+                setRestaurantRecs(data.restaurantRecs);
+                console.log(restaurantRecs);
+            }
+        } catch(error) {
+            console.log(error);
+            setRecsLoadingError(true);
+        }
 
         // re-set form?
         // setFormEntry({initialState});
