@@ -84,6 +84,7 @@ const FormBlock = () => {
         event.preventDefault();
         // re-route to answer page on submit?
         // router.push("/answer");
+        setRestaurantRecs("");
         setRecsLoading(true);
 
         //define variables for API prompt using for..in loop
