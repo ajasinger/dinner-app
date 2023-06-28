@@ -83,6 +83,7 @@ const FormBlock = () => {
     //event handler for submit
     const handleSubmit = async (event) => {
         event.preventDefault();
+        // re-route to answer page on submit
         // router.push("/answer");
         setRecsLoading(true);
 
