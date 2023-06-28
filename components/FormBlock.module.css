@@ -50,11 +50,12 @@
 }
 
 .answerSection {
-    padding-top: 5rem;
+    padding-top: 3rem;
 }
 
 .loadingSection {
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 /* animation for loading text */

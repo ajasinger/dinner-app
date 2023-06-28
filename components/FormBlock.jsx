@@ -387,7 +387,7 @@ const FormBlock = () => {
             </form>
 
             <div className={styles.answerSection}>
-                <div className={styles.LoadingSection}>
+                <div className={styles.loadingSection}>
                     { recsLoading && <p className={styles.loading}>your recommendations will be here soon</p> }
                     { recsLoadingError && <p>something went wrong,please try again.</p>}
                 </div>
