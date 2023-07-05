@@ -205,7 +205,7 @@ const FormBlock = () => {
                 <fieldset className={styles.eventType}>
                     <legend className={styles.inputTitle}><span className={styles.number}>2.</span>  What type of event is it? (select any amount)</legend>
                     {
-                        formEntry.map(({eventType}, index) => {
+                        eventTypeCheckbox.map((eventCheckbox, index) => {
                             return(
                                 <div>
                                     <input 
