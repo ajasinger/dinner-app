@@ -205,13 +205,13 @@ const FormBlock = () => {
                 <fieldset className={styles.eventType}>
                     <legend className={styles.inputTitle}><span className={styles.number}>2.</span>  What type of event is it? (select any amount)</legend>
                     {
-                        eventTypeCheckbox.map((eventCheckbox) => {
+                        formEntry.map(({eventType}, index) => {
                             return(
                                 <div>
                                     <input 
                                         type="checkbox" 
-                                        id={eventCheckbox} 
-                                        name={eventCheckbox}
+                                        id={`eventType-${index}`}
+                                        name={eventCheckbox} 
                                         checked={formEntry.eventType.meeting}
                                         onChange={handleEventTypeChange}
                                         className={styles.checkbox}
@@ -224,7 +224,7 @@ const FormBlock = () => {
                 </fieldset>
 
                 {/* event type */}
-                <fieldset className={styles.eventType}>
+                {/* <fieldset className={styles.eventType}>
                     <legend className={styles.inputTitle}><span className={styles.number}>2.</span>  What type of event is it? (select any amount)</legend>
                     <div>
                         <input 
@@ -270,7 +270,7 @@ const FormBlock = () => {
                         />
                         <label htmlFor="brunch" className={styles.checkboxLabel}>Brunch</label>
                     </div>
-                </fieldset>
+                </fieldset> */}
 
                 {/* food types */}
                 <fieldset className={styles.foodType}>
