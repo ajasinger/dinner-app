@@ -32,9 +32,6 @@ const FormBlock = () => {
         }
     }
 
-    // arrays to populate checkboxes
-    const eventTypeCheckbox = ["Dinner", "Meeting", "DateNight", "Drinks", "Brunch"];
-
     const [formEntry, setFormEntry] = useState(initialState);
     const [restaurantRecs, setRestaurantRecs] = useState("");
     const [recsLoading, setRecsLoading] = useState(false);
@@ -199,28 +196,6 @@ const FormBlock = () => {
                         placeholder="enter a New York neighborhood name"
                         className={styles.textBox}
                     />
-                </fieldset>
-
-                {/* event type mapped */}
-                <fieldset className={styles.eventType}>
-                    <legend className={styles.inputTitle}><span className={styles.number}>2.</span>  What type of event is it? (select any amount)</legend>
-                    {
-                        eventTypeCheckbox.map((eventCheckbox) => {
-                            return(
-                                <div>
-                                    <input 
-                                        type="checkbox" 
-                                        id={eventCheckbox} 
-                                        name={eventCheckbox}
-                                        checked={formEntry.eventType.meeting}
-                                        onChange={handleEventTypeChange}
-                                        className={styles.checkbox}
-                                    />
-                                    <label htmlFor={eventCheckbox} className={styles.checkboxLabel}>{eventCheckbox}</label>
-                                </div>
-                            )
-                        })
-                    }
                 </fieldset>
 
                 {/* event type */}
