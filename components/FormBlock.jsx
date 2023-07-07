@@ -24,17 +24,14 @@ const FormBlock = () => {
             "Chinese": false,
             "French": false,
             "Mediterranean": false,
-            "any": false
+            "Any": false
         },
         price: {
             "$$": false,
             "$$$": false,
-            "$$$": false
+            "$$$$": false
         }
     }
-
-    // arrays to populate checkboxes
-    // const eventTypeCheckbox = ["Dinner", "Meeting", "DateNight", "Drinks", "Brunch"];
 
     const [formEntry, setFormEntry] = useState(initialState);
     const [restaurantRecs, setRestaurantRecs] = useState("");
@@ -211,7 +208,7 @@ const FormBlock = () => {
                                 <div key={i}>
                                     <input 
                                         type="checkbox" 
-                                        id={`eventType ${i}`}
+                                        id={`eventType-${i}`}
                                         name={eventCheckbox} 
                                         checked={formEntry.eventType.value}
                                         onChange={handleEventTypeChange}
@@ -224,182 +221,48 @@ const FormBlock = () => {
                     }
                 </fieldset>
 
-                {/* event type */}
-                {/* <fieldset className={styles.eventType}>
-                    <legend className={styles.inputTitle}><span className={styles.number}>2.</span>  What type of event is it? (select any amount)</legend>
-                    <div>
-                        <input 
-                            type="checkbox" 
-                            id="meeting" 
-                            name="meeting" 
-                            checked={formEntry.eventType.meeting}
-                            onChange={handleEventTypeChange}
-                            className={styles.checkbox}
-                        />
-                        <label htmlFor="meeting" className={styles.checkboxLabel}>Meeting</label>
-                    </div>
-                    <div>
-                        <input 
-                            type="checkbox" 
-                            id="dateNight" 
-                            name="dateNight" 
-                            checked={formEntry.eventType.dateNight}
-                            onChange={handleEventTypeChange}
-                            className={styles.checkbox}
-                        />
-                        <label htmlFor="dateNight" className={styles.checkboxLabel}>Date Night</label>
-                    </div> 
-                    <div>   
-                        <input 
-                            type="checkbox" 
-                            id="drinks" 
-                            name="drinks" 
-                            checked={formEntry.eventType.drinks}
-                            onChange={handleEventTypeChange}
-                            className={styles.checkbox}
-                        />
-                        <label htmlFor="drinks" className={styles.checkboxLabel}>Drinks</label>
-                    </div>
-                    <div>
-                        <input 
-                            type="checkbox" 
-                            id="brunch" 
-                            name="brunch" 
-                            checked={formEntry.eventType.brunch}
-                            onChange={handleEventTypeChange}
-                            className={styles.checkbox}
-                        />
-                        <label htmlFor="brunch" className={styles.checkboxLabel}>Brunch</label>
-                    </div>
-                </fieldset> */}
-
-                {/* food types */}
+                {/* food types mapped*/}        
                 <fieldset className={styles.foodType}>
-                    <legend className={styles.inputTitle}><span className={styles.number}>3.</span>  What type of food would you like to eat? (select any amount)</legend>
-                    <div>
-                        <input 
-                            type="checkbox" 
-                            id="italian" 
-                            name="italian" 
-                            checked={formEntry.foodType.italian}
-                            onChange={handleFoodTypeChange}
-                        />
-                        <label htmlFor="italian" className={styles.checkboxLabel}>Italian</label>
-                    </div>
-                    <div>
-                        <input 
-                            type="checkbox" 
-                            id="newAmerican" 
-                            name="newAmerican" 
-                            checked={formEntry.foodType.newAmerican}
-                            onChange={handleFoodTypeChange}
-                            className={styles.checkbox}
-                        />
-                        <label htmlFor="newAmerican" className={styles.checkboxLabel}>New American</label>
-                    </div>
-                    <div>
-                        <input 
-                            type="checkbox" 
-                            id="japanese" 
-                            name="japanese" 
-                            checked={formEntry.foodType.japanese}
-                            onChange={handleFoodTypeChange}
-                            className={styles.checkbox}
-                        />
-                        <label htmlFor="japanese" className={styles.checkboxLabel}>Japanese</label>
-                    </div>
-                    <div>
-                        <input 
-                            type="checkbox" 
-                            id="mexican" 
-                            name="mexican" 
-                            checked={formEntry.foodType.mexican}
-                            onChange={handleFoodTypeChange}
-                            className={styles.checkbox}
-                        />
-                        <label htmlFor="mexican" className={styles.checkboxLabel}>Mexican</label>
-                        </div>
-                    <div>
-                        <input 
-                            type="checkbox" 
-                            id="chinese" 
-                            name="chinese" 
-                            checked={formEntry.foodType.chinese}
-                            onChange={handleFoodTypeChange}
-                            className={styles.checkbox}
-                        />
-                        <label htmlFor="chinese" className={styles.checkboxLabel}>Chinese</label>
-                    </div>
-                    <div>
-                        <input 
-                            type="checkbox" 
-                            id="french" 
-                            name="french" 
-                            checked={formEntry.foodType.french}
-                            onChange={handleFoodTypeChange}
-                            className={styles.checkbox}
-                        />
-                        <label htmlFor="french" className={styles.checkboxLabel}>French</label>
-                    </div>
-                    <div>
-                        <input 
-                            type="checkbox" 
-                            id="mediterranean" 
-                            name="mediterranean"
-                            checked={formEntry.foodType.mediterranean}
-                            onChange={handleFoodTypeChange}
-                            className={styles.checkbox}
-                        />
-                        <label htmlFor="mediterranean" className={styles.checkboxLabel}>Mediterranean</label>
-                    </div>
-                    <div>
-                        <input 
-                            type="checkbox" 
-                            id="any" 
-                            name="any" 
-                            checked={formEntry.foodType.any}
-                            onChange={handleFoodTypeChange}
-                            className={styles.checkbox}
-                        />
-                        <label htmlFor="any" className={styles.checkboxLabel}>Any</label>
-                    </div>
+                <legend className={styles.inputTitle}><span className={styles.number}>3.</span>  What type of food would you like to eat? (select any amount)</legend>
+                    {
+                        Object.keys(formEntry.foodType).map((foodCheckbox, i) => {
+                            return(
+                                <div key={i}>
+                                    <input 
+                                        type="checkbox" 
+                                        id={`foodType-${i}`}
+                                        name={foodCheckbox} 
+                                        checked={formEntry.foodType.value}
+                                        onChange={handleFoodTypeChange}
+                                        className={styles.checkbox}
+                                    />
+                                    <label htmlFor={foodCheckbox} className={styles.checkboxLabel}>{foodCheckbox}</label>
+                                </div>
+                            )
+                        })
+                    }
                 </fieldset>
 
-                {/* price point */}
+                {/* price point mapped*/}
                 <fieldset className={styles.price}>
                     <legend className={styles.inputTitle}><span className={styles.number}>4.</span>  What is your preferred price point? (select any amount)</legend>
-                    <div>
-                        <input 
-                            type="checkbox" 
-                            id="inexpensive" 
-                            name="inexpensive" 
-                            checked={formEntry.price.inexpensive}
-                            onChange={handlePriceChange}
-                        />
-                        <label htmlFor="inexpensive" className={styles.checkboxLabel}>$$</label>
-                    </div>
-                    <div>
-                        <input 
-                            type="checkbox" 
-                            id="midPriced" 
-                            name="midPriced" 
-                            checked={formEntry.price.midPriced}
-                            onChange={handlePriceChange}
-                            className={styles.checkbox}
-                        />
-                        <label htmlFor="midPriced" className={styles.checkboxLabel}>$$$</label>
-                    </div>
-                    <div>
-                        <input 
-                            type="checkbox" 
-                            id="expensive" 
-                            name="expensive" 
-                            checked={formEntry.price.expensive}
-                            onChange={handlePriceChange}
-                            className={styles.checkbox}
-                        />
-                        <label htmlFor="expensive" className={styles.checkboxLabel}>$$$$</label>
-                    </div>
+                    {
+                        Object.keys(formEntry.price).map((priceCheckbox, i) => {
+                            return(
+                                <div key={i}>
+                                    <input 
+                                        type="checkbox" 
+                                        id={`price-${i}`}
+                                        name={priceCheckbox} 
+                                        checked={formEntry.price.value}
+                                        onChange={handlePriceChange}
+                                        className={styles.checkbox}
+                                    />
+                                    <label htmlFor={priceCheckbox} className={styles.checkboxLabel}>{priceCheckbox}</label>
+                                </div>
+                            )
+                        })
+                    }
                 </fieldset>
 
                 {/* button */}
