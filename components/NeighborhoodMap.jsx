@@ -1,10 +1,23 @@
-import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+import { GoogleMapProvider } from "@ubilabs/google-maps-react-hooks";
+
+const mapOptions = {
+    zoom: 10,
+    center: {
+        lat: 40,
+        lng: -88
+    },
+};
 
 const NeighborhoodMap = () => {
+    const [mapContainer, setMapContainer] = useState();
+    
     return (
-        <div>
-            
-        </div>
+        <GoogleMapProvider
+            options={mapOptions}
+            googleMapsAPIKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
+        >
+            <div />
+        </GoogleMapProvider>
     );
 }
 
