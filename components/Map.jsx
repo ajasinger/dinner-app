@@ -1,5 +1,4 @@
 import styles from "./Map.module.css";
-import useMemo from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
 const Map = () => {
@@ -17,10 +16,10 @@ const MapDisplay = () => {
         <GoogleMap 
             zoom={10} 
             center={{lat: 44,lng: -80}} 
-            className={styles.mapContainer}
+            mapContainerStyle={{ width: '800px', height: '800px' }}
         >
         </GoogleMap>
-    )
+    );
 }
 
 export default Map;
