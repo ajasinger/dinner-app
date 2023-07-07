@@ -1,22 +1,25 @@
-import GoogleMapReact from "google-map-react";
+import styles from "./Map.module.css";
+import useMemo from "react";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
 const Map = () => {
-    const coordinates = { lat:0, lng:0 }
+    
+    const { isLoaded } = useLoadScript({
+        googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+    });
 
-    return(
-        <div>
-            <GoogleMapReact
-                defaultCenter={coordinates}
-                center={coordinates}
-                defaultZoom={14}
-                margin={[50, 50, 50, 50]}
-                options={""}
-                onChange={""}
-                onChildClick={""}
-            >
+    if(!isLoaded) return <div>loading...</div>;
+    return <MapDisplay />
+}
 
-            </GoogleMapReact>
-        </div>
+const MapDisplay = () => {
+    return (
+        <GoogleMap 
+            zoom={10} 
+            center={{lat: 44,lng: -80}} 
+            className={styles.mapContainer}
+        >
+        </GoogleMap>
     )
 }
 
