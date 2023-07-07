@@ -95,25 +95,17 @@ const FormBlock = () => {
         let addressString = "";
 
         for (const selectionCategory in formEntry) {
-            const dateNightString = "date night";
-            const newAmericanString = "new american";
-            const midPricedString = "mid-priced";
+
             const selectionObject = formEntry[selectionCategory];
 
             if (selectionCategory === "address1" || "address2" || "address3") {
                     addressString += `${selectionObject}, `;
             }
             for (const selectionType in selectionObject) {
-                if(selectionCategory === "eventType" && selectionObject[selectionType] && selectionType === 'dateNight') {
-                    eventString += `${dateNightString}, `;
-                } else if(selectionCategory === "eventType" && selectionObject[selectionType]) {
+                if(selectionCategory === "eventType" && selectionObject[selectionType]) {
                     eventString += `${selectionType}, `;
-                } else if(selectionCategory === "foodType" && selectionObject[selectionType] && selectionType === 'newAmerican') {
-                    foodString += `${newAmericanString}, `;
                 } else if(selectionCategory === "foodType" && selectionObject[selectionType]) {
                     foodString += `${selectionType}, `;
-                } else if(selectionCategory === "price" && selectionObject[selectionType] && selectionType === 'midPriced') {
-                    priceString += `${midPricedString}, `;
                 } else if(selectionCategory === "price" && selectionObject[selectionType]) {
                     priceString += `${selectionType}, `;
                 }
