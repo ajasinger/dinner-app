@@ -10,30 +10,31 @@ const FormBlock = () => {
         address2: "",
         address3: "",
         eventType: {
-            meeting: false,
-            dateNight: false, 
-            drinks: false,
-            brunch: false
+            "Dinner": false,
+            "Meeting": false,
+            "Date Night": false, 
+            "Drinks": false,
+            "Brunch": false
         },
         foodType: {
-            italian: false,
-            newAmerican: false,
-            japanese: false,
-            mexican: false,
-            chinese: false,
-            french: false,
-            mediterranean: false,
-            any: false
+            "Italian": false,
+            "New American": false,
+            "Japanese": false,
+            "Mexican": false,
+            "Chinese": false,
+            "French": false,
+            "Mediterranean": false,
+            "any": false
         },
         price: {
-            inexpensive: false,
-            midPriced: false,
-            expensive: false
+            "$$": false,
+            "$$$": false,
+            "$$$": false
         }
     }
 
     // arrays to populate checkboxes
-    const eventTypeCheckbox = ["Dinner", "Meeting", "DateNight", "Drinks", "Brunch"];
+    // const eventTypeCheckbox = ["Dinner", "Meeting", "DateNight", "Drinks", "Brunch"];
 
     const [formEntry, setFormEntry] = useState(initialState);
     const [restaurantRecs, setRestaurantRecs] = useState("");
@@ -205,14 +206,14 @@ const FormBlock = () => {
                 <fieldset className={styles.eventType}>
                     <legend className={styles.inputTitle}><span className={styles.number}>2.</span>  What type of event is it? (select any amount)</legend>
                     {
-                        eventTypeCheckbox.map((eventCheckbox, index) => {
+                        Object.keys(formEntry.eventType).map((eventCheckbox, i) => {
                             return(
-                                <div>
+                                <div key={i}>
                                     <input 
                                         type="checkbox" 
-                                        id={`eventType-${index}`}
+                                        id={`eventType ${i}`}
                                         name={eventCheckbox} 
-                                        checked={formEntry.eventType.meeting}
+                                        checked={formEntry.eventType.value}
                                         onChange={handleEventTypeChange}
                                         className={styles.checkbox}
                                     />
