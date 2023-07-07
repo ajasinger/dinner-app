@@ -1,9 +1,9 @@
-import Map from '../components/Map';
+import NeighborhoodMap from '../components/NeighborhoodMap';
 
 const MapDisplay = () => {
     return (
         <div>
-            < Map /> 
+            < NeighborhoodMap /> 
         </div>
     )
   }
