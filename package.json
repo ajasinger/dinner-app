@@ -11,6 +11,7 @@
   "dependencies": {
     "@prisma/client": "^4.15.0",
     "@react-google-maps/api": "^2.18.1",
+    "@ubilabs/google-maps-react-hooks": "^2.0.2",
     "@vercel/postgres": "^0.3.1",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
